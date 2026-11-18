@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>الدرس ٧-٢: نتائج الاحتمالات المُرجَّحة بالتساوي | رياضيات الصف الثامن - مدرسة محمد بن القاسم الثقفي</title>
+<meta name="description" content="درس تفاعلي متكامل مقسم إلى حصتين (٣٥ دقيقة لكل حصة) للصف الثامن الأساسي من إعداد أ/ عماد جابر: مختبر الفرص المتساوية، البطاقات، الجداول التكرارية، شبكة الأعداد، تقويم أبريل، تجارب العملات، أنشطة التمايز، ومسابقات صفية تفاعلية.">
+
+<!-- Open Graph & Social Media Preview Tags (WhatsApp, Facebook, X/Twitter) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_OM">
+<meta property="og:site_name" content="مدرسة محمد بن القاسم الثقفي (٥-١٠) · سلطنة عُمان">
+<meta property="og:title" content="الدرس ٧-٢: نتائج الاحتمالات المُرجَّحة بالتساوي | رياضيات الصف الثامن">
+<meta property="og:description" content="درس تفاعلي متكامل مقسم إلى حصتين (٣٥ دقيقة لكل حصة) من إعداد أ/ عماد جابر: مختبر الفرص المتساوية، الجداول والشبكات، تجارب العملات، أنشطة التمايز، ومسابقات صفية.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:secure_url" content="og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="الدرس ٧-٢: نتائج الاحتمالات المرجحة بالتساوي - إعداد أ/ عماد جابر">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="الدرس ٧-٢: نتائج الاحتمالات المُرجَّحة بالتساوي | رياضيات الصف الثامن">
+<meta name="twitter:description" content="درس تفاعلي متكامل مقسم إلى حصتين (٣٥ دقيقة لكل حصة) من إعداد أ/ عماد جابر: مختبر الفرص المتساوية، الجداول والشبكات، تجارب العملات، أنشطة التمايز، ومسابقات صفية.">
+<meta name="twitter:image" content="og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#EEF2F7; --card:#FFFFFF; --ink:#13233F; --muted:#56627A; --line:#D3DAE6; --dot:#C3CCDB;
+  --accent:#D9861C; --accent-ink:#FFFFFF; --teal:#11766F; --maroon:#9E2639; --soft:#F6F8FB;
+  --good:#1D8048; --good-bg:#E3F3E9; --bad:#BC322B; --bad-bg:#FBE6E4;
+  --f1:#D9861C; --f2:#11766F; --f3:#9E2639; --f4:#3556A8; --f5:#6E4597; --f6:#58902A;
+  --display:"Tajawal","IBM Plex Sans Arabic",Tahoma,sans-serif;
+  --body:"IBM Plex Sans Arabic",Tahoma,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0D1524; --card:#152038; --ink:#E7ECF5; --muted:#9AA7BF; --line:#2A3755; --dot:#26324C;
+  --accent:#F0A445; --accent-ink:#1A1205; --teal:#3AB1A6; --maroon:#E0677C; --soft:#1A2642;
+  --good:#52C584; --good-bg:#16352A; --bad:#F16D62; --bad-bg:#3A1C1F;
+  --f1:#E39530; --f2:#1E9389; --f3:#C1435A; --f4:#4C70C8; --f5:#8A63B5; --f6:#6FA93A;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0D1524; --card:#152038; --ink:#E7ECF5; --muted:#9AA7BF; --line:#2A3755; --dot:#26324C;
+  --accent:#F0A445; --accent-ink:#1A1205; --teal:#3AB1A6; --maroon:#E0677C; --soft:#1A2642;
+  --good:#52C584; --good-bg:#16352A; --bad:#F16D62; --bad-bg:#3A1C1F;
+  --f1:#E39530; --f2:#1E9389; --f3:#C1435A; --f4:#4C70C8; --f5:#8A63B5; --f6:#6FA93A;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;direction:rtl;
+  background-image:radial-gradient(var(--dot) 1.2px,transparent 1.3px);background-size:22px 22px}
+.page{max-width:1120px;margin:0 auto;padding:12px 16px 60px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.35;margin:0;letter-spacing:0}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+a{color:var(--teal)}
+.num{font-variant-numeric:tabular-nums}
+
+/* Vertical Fraction Component (No Slashes) */
+.frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.12;margin:0 4px;font-variant-numeric:tabular-nums;font-weight:700}
+.frac>span:first-child{border-bottom:1.6px solid currentColor;padding:0 5px 2px}
+.frac>span:last-child{padding:2px 5px 0}
+.frac.lg{font-size:1.12em}
+
+/* Header */
+.top{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:20px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:6px;position:relative}
+.author-badge{position:absolute;top:16px;left:18px;text-align:left;background:var(--soft);border:1px solid var(--line);padding:6px 14px;border-radius:12px;font-size:13.5px}
+.author-badge b{display:block;font-family:var(--display);font-weight:800;font-size:15.5px;color:var(--maroon)}
+.org{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--muted);font-weight:600;padding-left:195px}
+.org b{color:var(--ink)}
+.lessonno{display:inline-block;font-family:var(--display);font-weight:800;color:var(--accent);font-size:17px;margin-top:14px}
+.top h1{font-size:clamp(25px,4.2vw,37px);margin-top:4px;color:var(--ink)}
+.top .lead{color:var(--muted);margin-top:8px;max-width:54ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:13px;background:var(--soft);font-weight:600}
+.theme-btn{border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600}
+@media (max-width:820px){
+  .top{grid-template-columns:1fr}
+  .author-badge{position:static;margin-bottom:10px;text-align:right;display:inline-block}
+  .org{padding-left:0}
+}
+
+/* Hero Canvas */
+.hero-box{position:relative;height:270px;border-radius:16px;background:radial-gradient(circle at 50% 55%,var(--soft),transparent 72%);display:grid;place-items:center;overflow:hidden}
+#heroCanvas{width:100%;height:100%;display:block}
+.hero-cap{position:absolute;bottom:8px;font-size:13px;font-weight:700;color:var(--teal);background:var(--card);padding:4px 14px;border-radius:999px;border:1px solid var(--line);display:flex;align-items:center;gap:6px}
+
+/* Master Session Switcher (2 Prominent Tabs) */
+.master-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+@media (max-width:720px){.master-tabs{grid-template-columns:1fr}}
+.m-tab{border:2.5px solid var(--line);background:var(--card);border-radius:16px;padding:15px 18px;text-align:start;display:grid;gap:5px;transition:all .18s;position:relative;box-shadow:0 4px 12px rgba(0,0,0,.03)}
+.m-tab:hover{border-color:var(--accent)}
+.m-tab .m-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.m-tab .m-badge{font-size:12.5px;font-weight:700;padding:2px 10px;border-radius:999px;background:var(--soft);border:1px solid var(--line);color:var(--muted)}
+.m-tab b{font-family:var(--display);font-weight:800;font-size:18.5px;color:var(--ink)}
+.m-tab span.m-sub{font-size:13.5px;color:var(--muted);line-height:1.5}
+.m-tab.on{border-color:var(--teal);background:linear-gradient(135deg,var(--card),rgba(17,118,111,.08));box-shadow:0 6px 20px rgba(17,118,111,.14)}
+.m-tab.on b{color:var(--teal)}
+.m-tab.on .m-badge{background:var(--teal);color:#fff;border-color:var(--teal)}
+.m-tab[data-session="2"].on{border-color:var(--accent);background:linear-gradient(135deg,var(--card),rgba(217,134,28,.1));box-shadow:0 6px 20px rgba(217,134,28,.14)}
+.m-tab[data-session="2"].on b{color:var(--accent)}
+.m-tab[data-session="2"].on .m-badge{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+/* Sticky Nav */
+.nav{position:sticky;top:6px;z-index:20;margin:12px 0 6px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin;box-shadow:0 4px 16px rgba(0,0,0,.05)}
+.nav a{flex:none;text-decoration:none;color:var(--ink);font-size:13.5px;font-weight:600;padding:6px 11px;border-radius:9px;white-space:nowrap}
+.nav a:hover,.nav a.on{background:var(--accent);color:var(--accent-ink)}
+.nav .nav-s-pill{flex:none;display:inline-flex;align-items:center;padding:4px 10px;border-radius:9px;font-size:12.5px;font-weight:800;background:var(--ink);color:var(--paper);margin-inline-end:4px}
+
+/* Session Panels */
+.session-pane[hidden]{display:none!important}
+
+/* Sections & Cards */
+.sec{margin-top:26px;scroll-margin-top:68px}
+.sec-h{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.sec-h .n{flex:none;width:38px;height:38px;border-radius:10px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:18px}
+.sec-h h2{font-size:clamp(20px,2.8vw,25px)}
+.sec-h small{display:block;color:var(--muted);font-family:var(--body);font-size:13.5px;font-weight:500;margin-top:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.split{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px}
+@media (max-width:780px){.grid2,.grid3,.split{grid-template-columns:1fr}}
+.card h3{font-size:19px;margin-bottom:8px}
+.muted{color:var(--muted)}
+.olist{margin:0;padding-inline-start:22px;display:grid;gap:6px}
+.olist li::marker{color:var(--accent);font-weight:700}
+
+/* Buttons & Controls */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--line);background:var(--soft);border-radius:10px;padding:8px 14px;font-weight:600;font-size:14.5px;min-height:40px}
+.btn:hover{border-color:var(--accent)}
+.btn.pri{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{border:none;background:var(--card);padding:7px 12px;font-weight:600;font-size:13.5px;border-inline-end:1px solid var(--line)}
+.seg button:last-child{border-inline-end:none}
+.seg button.on{background:var(--ink);color:var(--paper)}
+
+/* Canvas & Interactive Stages */
+.canvas-wrap{position:relative;border-radius:14px;border:1px solid var(--line);background:linear-gradient(180deg,var(--soft),var(--card));overflow:hidden}
+canvas.stage-cv{display:block;width:100%;height:260px}
+.stage-badge{position:absolute;top:10px;right:12px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:700;color:var(--teal);pointer-events:none}
+
+/* Interactive Grid 1-40 & April Calendar */
+.num-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;direction:rtl}
+.num-cell{padding:6px 2px;text-align:center;border-radius:7px;border:1px solid var(--line);background:var(--card);font-weight:700;font-size:14px;cursor:pointer;transition:all .15s;user-select:none}
+.num-cell:hover{border-color:var(--teal)}
+.num-cell.hl{background:var(--teal);color:#fff;border-color:var(--teal)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.cal-hd{background:var(--ink);color:var(--paper);font-size:12px;font-weight:700;padding:5px 2px;border-radius:6px}
+.cal-day{padding:6px 2px;border-radius:6px;border:1px solid var(--line);background:var(--card);font-weight:700;font-size:13.5px;cursor:pointer;transition:all .15s;user-select:none}
+.cal-day:hover{border-color:var(--accent)}
+.cal-day.empty{background:transparent;border-color:transparent;cursor:default}
+.cal-day.hl{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+/* Omani 50 Baisa Coin Cards */
+.coin-pair{display:inline-flex;gap:6px;align-items:center;padding:8px 12px;border-radius:14px;border:2px solid var(--line);background:var(--card)}
+.coin-disc{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:15px;box-shadow:inset 0 2px 5px rgba(255,255,255,.5),0 2px 6px rgba(0,0,0,.12)}
+.coin-disc.h{background:linear-gradient(135deg,#F0A445,#C97714);color:#fff;border:2px solid #9A580A}
+.coin-disc.t{background:linear-gradient(135deg,#3AB1A6,#0E635C);color:#fff;border:2px solid #094540}
+
+/* Differentiation Tabs & Cards */
+.diff-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.diff-tabs{grid-template-columns:1fr}}
+.diff-tab{border:2px solid var(--line);background:var(--card);border-radius:14px;padding:12px;text-align:start;display:grid;gap:4px;transition:transform .15s}
+.diff-tab b{font-family:var(--display);font-weight:800;font-size:16.5px}
+.diff-tab span{font-size:13px;color:var(--muted)}
+.diff-tab.t1.on{border-color:var(--good);background:var(--good-bg)}
+.diff-tab.t2.on{border-color:var(--accent);background:rgba(217,134,28,.12)}
+.diff-tab.t3.on{border-color:var(--maroon);background:rgba(158,38,57,.12)}
+.diff-panel{display:grid;gap:14px}
+.diff-task{border:1px solid var(--line);background:var(--soft);border-radius:14px;padding:14px;display:grid;gap:10px}
+.diff-task .tag{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12.5px;font-weight:700;width:fit-content}
+.tag.g{background:var(--good-bg);color:var(--good)}
+.tag.m{background:rgba(217,134,28,.18);color:var(--accent)}
+.tag.h{background:var(--bad-bg);color:var(--maroon)}
+.scaff-box{background:var(--card);border-inline-start:4px solid var(--teal);padding:8px 12px;border-radius:8px;font-size:14px}
+
+/* Fraction Input Box */
+.frac-inp{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 4px;background:var(--card);padding:4px 6px;border-radius:10px;border:1px solid var(--line)}
+.frac-inp input{width:56px;text-align:center;padding:3px;border:1.5px solid var(--line);border-radius:6px;background:var(--soft);color:var(--ink);font:inherit;font-weight:700;font-size:14px}
+.frac-inp .bar{width:100%;height:2px;background:var(--ink);margin:3px 0}
+.frac-inp.ok{border-color:var(--good);background:var(--good-bg)}
+.frac-inp.no{border-color:var(--bad);background:var(--bad-bg)}
+
+/* Criteria */
+.crit{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:10px;border:1px solid transparent;text-align:start;background:none;width:100%}
+.crit .box{flex:none;width:22px;height:22px;border-radius:6px;border:2px solid var(--teal);margin-top:3px;display:grid;place-items:center;font-size:14px;color:var(--card)}
+.crit[aria-pressed="true"] .box{background:var(--teal)}
+.crit[aria-pressed="true"]{background:var(--soft);border-color:var(--line)}
+
+/* Vocab & Formula Box */
+.vocab{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.term{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:8px;align-content:start}
+.term b{font-family:var(--display);font-weight:800;font-size:18.5px;color:var(--maroon)}
+.formula-banner{background:var(--soft);border:1.5px solid var(--teal);border-radius:12px;padding:12px 14px;font-weight:700;color:var(--teal);text-align:center;font-size:16px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px}
+
+/* Flip Cards */
+.flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.flip{min-height:132px;border-radius:14px;border:1px solid var(--line);background:var(--card);padding:14px;text-align:start;display:grid;gap:8px;align-content:start}
+.flip .q{font-weight:700}
+.flip .a{color:var(--teal);font-weight:700}
+.flip .hint{font-size:13px;color:var(--muted)}
+
+/* Warmup Sort */
+.items{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:12px}
+.item{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:14px;display:grid;gap:8px;justify-items:center;text-align:center}
+.item .btn{font-size:14px;padding:6px 12px;min-height:38px}
+.fb{font-size:14px;font-weight:600;min-height:1.5em}
+.fb.ok{color:var(--good)} .fb.no{color:var(--bad)}
+
+/* Flow */
+.flow{display:grid;gap:10px}
+.step{display:grid;grid-template-columns:92px minmax(0,1fr);gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.step .t{font-family:var(--display);font-weight:800;color:var(--accent);font-size:15px;line-height:1.3}
+.step .t span{display:block;font-size:26px;color:var(--ink)}
+.step h3{font-size:18px}
+.step .roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px;font-size:14.5px}
+.step .roles div{background:var(--soft);border-radius:10px;padding:8px 10px}
+.step .roles b{display:block;font-size:13px;color:var(--muted)}
+@media (max-width:600px){.step{grid-template-columns:1fr}.step .roles{grid-template-columns:1fr}}
+
+/* Stats & Verdicts */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.stat{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:8px;text-align:center}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:20px;color:var(--accent)}
+.stat small{font-size:12.5px;color:var(--muted);font-weight:600}
+
+.verdict{border-radius:12px;padding:10px 14px;font-weight:600;background:var(--soft);border:1px solid var(--line)}
+.verdict.ok{background:var(--good-bg);color:var(--good);border-color:transparent}
+.verdict.no{background:var(--bad-bg);color:var(--bad);border-color:transparent}
+
+/* Interactive Textbook Tables */
+.tbl-wrap{overflow-x:auto}
+.math-tbl{width:100%;border-collapse:collapse;text-align:center;font-size:15px}
+.math-tbl th{background:var(--ink);color:var(--paper);padding:9px;font-family:var(--display);font-weight:700}
+.math-tbl td{padding:8px;border:1px solid var(--line);background:var(--card)}
+.math-tbl tr:nth-child(even) td{background:var(--soft)}
+
+/* Code box */
+.code{display:flex;gap:8px;align-items:center;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:6px 8px;direction:ltr}
+.code code{flex:1;min-width:0;overflow-x:auto;white-space:nowrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;padding:4px}
+.code .btn{min-height:32px;padding:4px 10px;font-size:13px}
+
+/* Quizzes */
+.quiz{display:grid;gap:12px}
+.qq{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.qq .qt{font-weight:700;display:flex;gap:8px;align-items:baseline}
+.qq .qt .k{flex:none;color:var(--accent);font-family:var(--display)}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+@media (max-width:540px){.opts{grid-template-columns:1fr}}
+.opt{text-align:start;border:1.5px solid var(--line);background:var(--soft);border-radius:10px;padding:8px 12px;display:flex;gap:10px;align-items:center;font-weight:500}
+.opt .l{flex:none;width:26px;height:26px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font-weight:700;font-size:14px}
+.opt.sel{border-color:var(--ink)}
+.opt.sel .l{background:var(--ink);color:var(--paper)}
+.opt.right{border-color:var(--good);background:var(--good-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.why{margin-top:10px;font-size:14.5px;padding:8px 12px;border-radius:10px;background:var(--soft);border-inline-start:4px solid var(--teal)}
+.score{font-family:var(--display);font-weight:800;font-size:19px}
+.result{border-radius:14px;padding:16px;background:var(--ink);color:var(--paper);display:grid;gap:6px}
+.result b{font-family:var(--display);font-size:30px;color:var(--accent)}
+
+/* Competition */
+.comp{background:var(--ink);color:var(--paper);border-radius:18px;padding:18px;--cline:rgba(255,255,255,.18)}
+.comp:fullscreen{overflow:auto;padding:28px}
+.comp .card{background:rgba(255,255,255,.06);border-color:var(--cline);color:var(--paper)}
+.comp input,.comp select{background:rgba(255,255,255,.1);color:var(--paper);border:1px solid var(--cline);border-radius:8px;padding:6px 10px;font:inherit;min-width:0}
+.comp .btn{background:rgba(255,255,255,.1);border-color:var(--cline);color:var(--paper)}
+.comp .btn.pri{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.comp .muted{color:rgba(255,255,255,.72)}
+.ghead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center}
+.timer{height:10px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden;margin:10px 0}
+.timer i{display:block;height:100%;background:var(--accent);width:100%;transition:width .25s linear}
+.cq{font-family:var(--display);font-weight:800;font-size:clamp(19px,2.8vw,25px);margin:8px 0}
+.copts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.copt{border:1px solid var(--cline);border-radius:10px;padding:8px 12px;display:flex;gap:10px;align-items:center;font-weight:600}
+.copt .l{width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:none}
+.copt.right{background:var(--good);color:#fff;border-color:var(--good)}
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:14px}
+.gp{border:1px solid var(--cline);border-radius:12px;padding:10px;display:grid;gap:8px}
+.gp .gn{display:flex;justify-content:space-between;font-weight:700}
+.gp .gb{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.gp .gb button{border:1px solid var(--cline);background:rgba(255,255,255,.08);color:var(--paper);border-radius:8px;min-height:42px;font-weight:700;font-size:18px}
+.gp .gb button.pick{background:var(--accent);color:var(--accent-ink)}
+.gp .st{font-size:13.5px;min-height:1.5em}
+.gp.ok{border-color:var(--good);box-shadow:inset 0 0 0 1px var(--good)}
+.gp.no{border-color:var(--bad)}
+.board{width:100%;border-collapse:collapse;font-size:15px}
+.board th,.board td{padding:8px;border-bottom:1px solid var(--cline);text-align:start}
+.board tr.win td{color:var(--accent);font-weight:700}
+
+/* Overlay & Confetti */
+.overlay{position:fixed;inset:0;z-index:50;background:rgba(8,14,28,.88);display:grid;place-items:center;padding:24px;text-align:center;color:#fff}
+.overlay[hidden]{display:none!important}
+.overlay h2{font-size:clamp(34px,8vw,72px);color:#F0A445}
+.overlay p{font-size:clamp(18px,3vw,26px)}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:51}
+
+/* Homework */
+.field{display:grid;gap:4px}
+.field label{font-weight:600;font-size:14px}
+.field input,.field textarea{font:inherit;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:8px 10px;width:100%}
+.field textarea{min-height:74px;resize:vertical}
+.mail{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.mail code{font-size:16px;font-weight:700;direction:ltr;user-select:all;color:var(--maroon)}
+pre.msg{white-space:pre-wrap;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px;font-family:var(--body);font-size:14px;max-height:260px;overflow:auto;margin:0}
+
+/* Mind Map */
+.mm-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.mm-wrap svg{display:block;min-width:820px;width:100%;height:auto}
+
+/* Game */
+.game-card{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:10px}
+.game-opts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+
+.foot{margin-top:36px;text-align:center;color:var(--muted);font-size:14px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<!-- Header -->
+<header class="top">
+  <div class="author-badge">
+    <span>مدرسة محمد بن القاسم الثقفي (٥-١٠)</span>
+    <b>إعداد وتصميم: أ/ عماد جابر</b>
+  </div>
+  <div>
+    <div class="org"><span><b>سلطنة عُمان</b></span><span>وزارة التعليم</span><span>محافظة ظفار</span></div>
+    <span class="lessonno">الدرس ٧-٢ · الوحدة السابعة · الاحتمالات</span>
+    <h1>نتائج الاحتمالات المُرجَّحة بالتساوي</h1>
+    <p class="lead">درس تفاعلي متكامل مقسم إلى حصتين (٣٥ دقيقة لكل حصة) للصف الثامن الأساسي: نستكشف فضاء العينة المتكافئ الفرص، ونحسب الاحتمال النظري في صورة كسور مبسّطة من خلال البطاقات والجداول والشبكات وتجارب العملات.</p>
+    <div class="meta">
+      <span class="pill">الصف الثامن</span>
+      <span class="pill">حصتان · ٣٥ دقيقة لكل حصة</span>
+      <span class="pill">مراعاة التمايز وتفريد التعليم</span>
+      <button class="theme-btn" id="themeToggle">المظهر: تلقائي</button>
+    </div>
+  </div>
+  <div class="hero-box">
+    <canvas id="heroCanvas" aria-label="رسم تفاعلي لحجر نرد ذي ستة أوجه متكافئة الفرص"></canvas>
+    <span class="hero-cap" id="heroCap">حجر نرد متكافئ الفرص: احتمال كل وجه = <span class="frac"><span>١</span><span>٦</span></span></span>
+  </div>
+</header>
+
+<!-- Master Session Tabs (Session 1 & Session 2) -->
+<div class="master-tabs" id="masterTabs" role="tablist" aria-label="اختيار الحصة الدراسية">
+  <button class="m-tab on" data-session="1" role="tab" aria-selected="true">
+    <div class="m-top">
+      <b>📘 الحصة الأولى (٣٥ دقيقة): مفهوم الاحتمالات المرجحة بالتساوي والبطاقات</b>
+      <span class="m-badge">الحصة ١ / ٢</span>
+    </div>
+    <span class="m-sub">التهيئة، التعلم القبلي، المفردات، مختبر حجر النرد وبطاقات «الموسوعة» و«رياضيَّات»، التمايز (١-٢)، المسابقة، والواجب.</span>
+  </button>
+  <button class="m-tab" data-session="2" role="tab" aria-selected="false">
+    <div class="m-top">
+      <b>📙 الحصة الثانية (٣٥ دقيقة): الجداول التكرارية والشبكات والعملات المعدنية</b>
+      <span class="m-badge">الحصة ٢ / ٢</span>
+    </div>
+    <span class="m-sub">تهيئة العملتين، التعلم القبلي، المفردات، مختبر سكرابل وشبكة الأعداد (١-٤٠) وتقويم أبريل، التمايز (٦-١٠)، المسابقة، والواجب.</span>
+  </button>
+</div>
+
+<!-- Sticky Navigation (Dynamically binds to active session) -->
+<nav class="nav" id="nav">
+  <span class="nav-s-pill" id="navSessionPill">الحصة الأولى</span>
+  <a href="#s-goals">الأهداف</a>
+  <a href="#s-criteria">معايير النجاح</a>
+  <a href="#s-vocab">المفردات والقوانين</a>
+  <a href="#s-prior">التعلم القبلي</a>
+  <a href="#s-warm">التهيئة</a>
+  <a href="#s-flow">سير الحصة</a>
+  <a href="#s-lab">المختبر التفاعلي</a>
+  <a href="#s-diff">أنشطة التمايز</a>
+  <a href="#s-formative">التقويم التكويني</a>
+  <a href="#s-final">التقويم الختامي</a>
+  <a href="#s-comp">المسابقة</a>
+  <a href="#s-hw">الواجب</a>
+  <a href="#s-mind">الخريطة الذهنية</a>
+  <a href="#s-game">اللعبة</a>
+</nav>
+
+<!-- ===================================================================== -->
+<!-- ======================== SESSION 1 PANEL ============================ -->
+<!-- ===================================================================== -->
+<div class="session-pane" id="pane-1">
+
+  <!-- 1.1 Goals -->
+  <section class="sec" id="s1-goals">
+    <div class="sec-h"><span class="n">١</span><h2>الأهداف التعليمية — الحصة الأولى<small>يتوقّع في نهاية الحصة الأولى (٣٥ دقيقة) أن يكون الطالب قادرًا على أن:</small></h2></div>
+    <div class="card">
+      <ol class="olist">
+        <li>يُحدّد ما إذا كانت نتائج تجربة عشوائية <b>مُرجَّحة بالتساوي</b> أم لا (تكافؤ الفرص).</li>
+        <li>يكتب احتمال وقوع نتيجة ما على صورة <b>كسر اعتيادي (بسط ومقام)</b> بقسمة عدد النواتج المطلوبة على العدد الكلي للنواتج الممكنة.</li>
+        <li>يُبسّط كسر الاحتمال الناتج إلى <b>أبسط صورة</b> عند رمي حجر النرد أو اختيار شهر من السنة.</li>
+        <li>يُطبّق مثال (٧-٢) لحساب احتمال وقوع الحدث واحتمال عدم وقوعه عند سحب بطاقات الحروف عشوائياً.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 1.2 Success Criteria -->
+  <section class="sec" id="s1-criteria">
+    <div class="sec-h"><span class="n">٢</span><h2>معايير النجاح — الحصة الأولى<small>اضغط على كل معيار حين تتقنه (تقييم ذاتي للحصة الأولى)</small></h2></div>
+    <div class="card" id="s1CritList"></div>
+  </section>
+
+  <!-- 1.3 Vocab & Laws -->
+  <section class="sec" id="s1-vocab">
+    <div class="sec-h"><span class="n">٣</span><h2>المفردات والقوانين — الحصة الأولى</h2></div>
+    <div class="grid2" style="margin-bottom:12px">
+      <div class="formula-banner">
+        <span>احتمال الحدث (ع) = </span>
+        <span class="frac lg"><span>عدد النواتج المطلوبة (المرغوبة)</span><span>العدد الكلي للنواتج الممكنة</span></span>
+      </div>
+      <div class="formula-banner" style="border-color:var(--accent);color:var(--maroon)">
+        <span>شرط التطبيق: يجب أن تكون <b>كل النتائج</b> لها احتمالات متساوية، ويُكتب الكسر في <b>أبسط صورة</b></span>
+      </div>
+    </div>
+    <div class="vocab" id="s1VocabList"></div>
+  </section>
+
+  <!-- 1.4 Prior Learning -->
+  <section class="sec" id="s1-prior">
+    <div class="sec-h"><span class="n">٤</span><h2>التعلّم القبلي — الحصة الأولى<small>اضغط على البطاقة لمراجعة تبسيط الكسور والعدد الكلي للنواتج في حجر النرد وأشهر السنة</small></h2></div>
+    <div class="flips" id="s1Flips"></div>
+  </section>
+
+  <!-- 1.5 Warmup -->
+  <section class="sec" id="s1-warm">
+    <div class="sec-h"><span class="n">٥</span><h2>التهيئة والتمهيد — الحصة الأولى<small>نشاط تفاعلي: اختر الاحتمال الصحيح في أبسط صورة لأمثلة الكتاب التمهيدية</small></h2></div>
+    <div class="items" id="s1WarmItems"></div>
+    <p class="fb" id="s1WarmScore" style="margin-top:10px"></p>
+  </section>
+
+  <!-- 1.6 Lesson Flow (35 mins) -->
+  <section class="sec" id="s1-flow">
+    <div class="sec-h"><span class="n">٦</span><h2>سير الحصة الأولى والأنشطة (٣٥ دقيقة)</h2></div>
+    <div class="flow" id="s1FlowList"></div>
+  </section>
+
+  <!-- 1.7 Interactive Lab (Canvas Dice + Mawsoa + Math Cards) -->
+  <section class="sec" id="s1-lab">
+    <div class="sec-h"><span class="n">٧</span><h2>مختبر الفرص المتساوية التفاعلي<small>محاكاة بصرية لرمي حجر النرد (٦ أوجه)، وبطاقات كلمة «الموسوعة» (مثال ٧-٢)، وكلمة «رياضيَّات» (تمرين ٢)</small></h2></div>
+    <div class="split">
+      <div>
+        <div class="canvas-wrap">
+          <canvas id="s1LabCanvas" class="stage-cv" aria-label="محاكاة بصرية للبطاقات وحجر النرد"></canvas>
+          <span class="stage-badge" id="s1LabBadge">مثال ٧-٢: كلمة «الموسوعة» (٨ بطاقات)</span>
+        </div>
+        <div class="stats">
+          <div class="stat"><b class="num" id="s1StFav">٢</b><small>النواتج المطلوبة</small></div>
+          <div class="stat"><b class="num" id="s1StTot">٨</b><small>العدد الكلي للنواتج</small></div>
+          <div class="stat"><b class="num" id="s1StProb"><span class="frac"><span>١</span><span>٤</span></span></b><small>الاحتمال في أبسط صورة</small></div>
+        </div>
+      </div>
+      <div class="card" style="display:grid;gap:11px;align-content:start">
+        <h3>اختر التجربة العشوائية</h3>
+        <div class="seg" id="s1ExpSeg">
+          <button data-e="mawsoa" class="on">مثال ٧-٢: «الموسوعة» (٨)</button>
+          <button data-e="dice">حجر النرد (٦ أوجه)</button>
+          <button data-e="math">تمرين ٢: «رياضيَّات» (٧)</button>
+        </div>
+        <div id="s1EventBtns" class="row"></div>
+        <div class="row">
+          <button class="btn dark" id="s1DrawBtn">🎲 اسحب / ارمِ عشوائياً</button>
+          <span class="pill" id="s1DrawRes">اضغط للتجربة العشوائية</span>
+        </div>
+        <div class="verdict" id="s1LabExplain" style="font-size:14.5px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1.8 Differentiation -->
+  <section class="sec" id="s1-diff">
+    <div class="sec-h"><span class="n">٨</span><h2>أنشطة التمايز وتفريد التعليم — الحصة الأولى<small>اختر مسارك، وأدخل البسط والمقام في أبسط صورة للتحقق الفوري</small></h2></div>
+    <div class="card">
+      <div class="diff-tabs" id="s1DiffTabs" role="tablist">
+        <button class="diff-tab t1 on" data-level="1">
+          <b>🟢 المسار الأساسي (تمرين ١: حجر النرد)</b>
+          <span>رمي حجر نرد ذي ستة أوجه وإيجاد الاحتمالات البسيطة والمتممة</span>
+        </button>
+        <button class="diff-tab t2" data-level="2">
+          <b>🟠 المسار المتوسط (تمرين ٢: كلمة «رياضيَّات»)</b>
+          <span>بطاقات الحروف السبع والتبسيط وترتيب الحروف الأبجدية</span>
+        </button>
+        <button class="diff-tab t3" data-level="3">
+          <b>🔴 المسار المتقدم (مسائل مركّبة على الكلمات والأشهر)</b>
+          <span>دمج الاحتمالات المتساوية والحدث المتمم في مسائل إثرائية</span>
+        </button>
+      </div>
+      <div id="s1DiffContent" class="diff-panel"></div>
+    </div>
+  </section>
+
+  <!-- 1.9 Formative Assessment -->
+  <section class="sec" id="s1-formative">
+    <div class="sec-h"><span class="n">٩</span><h2>التقويم التكويني — الحصة الأولى<small>٤ أسئلة اختيار من متعدد بتغذية راجعة وتعليل فوري</small></h2></div>
+    <div class="quiz" id="s1FormQuiz"></div>
+    <p class="score" id="s1FormScore" style="margin-top:10px"></p>
+  </section>
+
+  <!-- 1.10 Final Assessment -->
+  <section class="sec" id="s1-final">
+    <div class="sec-h"><span class="n">١٠</span><h2>التقويم الختامي — الحصة الأولى<small>أجب عن الأسئلة الستة ثم اضغط «صحّح إجاباتي»</small></h2></div>
+    <div class="field" style="max-width:360px;margin-bottom:12px"><label for="s1FinName">اسم الطالب</label><input id="s1FinName" placeholder="اكتب اسمك الثلاثي..." autocomplete="off"></div>
+    <div class="quiz" id="s1FinQuiz"></div>
+    <div class="row" style="margin-top:12px"><button class="btn pri" id="s1FinSubmit">صحّح إجاباتي</button><button class="btn" id="s1FinReset">إعادة المحاولة</button></div>
+    <div id="s1FinResult" style="margin-top:12px"></div>
+  </section>
+
+  <!-- 1.11 Classroom Competition -->
+  <section class="sec" id="s1-comp">
+    <div class="sec-h"><span class="n">١١</span><h2>مسابقة المجموعات الصفية — الحصة الأولى<small>زمن كل سؤال ٣٠ ثانية · ١٠ نقاط للدقة + حتى ٥ نقاط للسرعة</small></h2></div>
+    <div class="comp" id="s1CompBox"></div>
+  </section>
+
+  <!-- 1.12 Homework -->
+  <section class="sec" id="s1-hw">
+    <div class="sec-h"><span class="n">١٢</span><h2>الواجب المنزلي — الحصة الأولى<small>مسائل من تمارين (١) و(٢) مع تجهيز الرسالة لإرسالها إلى المعلم</small></h2></div>
+    <div class="card" style="display:grid;gap:12px">
+      <div class="mail"><span>المعلم: <b>أ/ عماد جابر</b></span><span>·</span><span>البريد الإلكتروني:</span><code>em5555592@gmail.com</code><button class="btn" id="s1CopyMail">نسخ البريد</button></div>
+      <div class="grid3">
+        <div class="field"><label for="s1HwName">اسم الطالب</label><input id="s1HwName" autocomplete="off"></div>
+        <div class="field"><label for="s1HwClass">الصف والشعبة</label><input id="s1HwClass" placeholder="مثال: ٨/١" autocomplete="off"></div>
+        <div class="field"><label for="s1HwGroup">المجموعة</label><input id="s1HwGroup" autocomplete="off"></div>
+      </div>
+      <div id="s1HwTasks" style="display:grid;gap:12px"></div>
+      <div class="row"><button class="btn pri" id="s1HwBuild">جهّز رسالة واجب الحصة الأولى</button></div>
+      <div id="s1HwOut" hidden style="display:grid;gap:10px">
+        <pre class="msg" id="s1HwMsg"></pre>
+        <div class="row"><a class="btn dark" id="s1HwMailto" href="#">فتح البريد وإرسال الواجب</a><button class="btn" id="s1HwCopy">نسخ نص الواجب</button><span class="fb" id="s1HwFb"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1.13 Mind Map -->
+  <section class="sec" id="s1-mind">
+    <div class="sec-h"><span class="n">١٣</span><h2>الخريطة الذهنية — الحصة الأولى</h2></div>
+    <div class="mm-wrap" id="s1MindMap"></div>
+  </section>
+
+  <!-- 1.14 Interactive Game -->
+  <section class="sec" id="s1-game">
+    <div class="sec-h"><span class="n">١٤</span><h2>لعبة الحصة الأولى: تحدّي البطاقات وحجر النرد<small>احسب الاحتمال في أبسط صورة بسرعة ودقة لتجميع النقاط</small></h2></div>
+    <div class="card" style="display:grid;gap:12px">
+      <div class="ghead">
+        <span class="score">النقاط: <b class="num" id="s1GPts">٠</b></span>
+        <span class="pill">السؤال: <b class="num" id="s1GQNo">١</b> / ٦</span>
+        <span class="pill">سلسلة الإجابات الصحيحة: <b class="num" id="s1GStreak">٠</b> 🔥</span>
+      </div>
+      <div class="grid2" style="align-items:center">
+        <div id="s1GVisual" style="display:grid;place-items:center;min-height:170px;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center"></div>
+        <div class="game-card">
+          <h3 id="s1GPrompt" style="font-size:18px"></h3>
+          <p class="muted" id="s1GHint" style="font-size:14px"></p>
+          <div class="game-opts" id="s1GOpts"></div>
+          <div class="verdict" id="s1GMsg">اختر الإجابة الصحيحة في أبسط صورة.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===================================================================== -->
+<!-- ======================== SESSION 2 PANEL ============================ -->
+<!-- ===================================================================== -->
+<div class="session-pane" id="pane-2" hidden>
+
+  <!-- 2.1 Goals -->
+  <section class="sec" id="s2-goals">
+    <div class="sec-h"><span class="n">١</span><h2>الأهداف التعليمية — الحصة الثانية<small>يتوقّع في نهاية الحصة الثانية (٣٥ دقيقة) أن يكون الطالب قادرًا على أن:</small></h2></div>
+    <div class="card">
+      <ol class="olist">
+        <li>يستخرج الاحتمالات من <b>الجداول التكرارية</b> (بلاطات سكرابل) و<b>الشبكات العددية</b> (١ إلى ٤٠) و<b>التقويم الشهري</b> (أبريل).</li>
+        <li>يُحدّد جميع عناصر <b>فضاء العينة</b> المُرجَّح بالتساوي عند رمي عملتين معدنيتين (٤ نواتج) وثلاث عملات معدنية (٨ نواتج).</li>
+        <li>يُميّز بين عدد أيام السنة العادية (٣٦٥ يوماً) والسنة الكبيسة (٣٦٦ يوماً) وأثرها على حساب الاحتمالات.</li>
+        <li>يحسب احتمالات الأرقام الأحادية (٠–٩) والثنائية (٠٠–٩٩) باستخدام التعداد المنتظم والحدث المتمم.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 2.2 Success Criteria -->
+  <section class="sec" id="s2-criteria">
+    <div class="sec-h"><span class="n">٢</span><h2>معايير النجاح — الحصة الثانية<small>اضغط على كل معيار حين تتقنه (تقييم ذاتي للحصة الثانية)</small></h2></div>
+    <div class="card" id="s2CritList"></div>
+  </section>
+
+  <!-- 2.3 Vocab & Laws -->
+  <section class="sec" id="s2-vocab">
+    <div class="sec-h"><span class="n">٣</span><h2>المفردات والقوانين — الحصة الثانية</h2></div>
+    <div class="grid2" style="margin-bottom:12px">
+      <div class="formula-banner">
+        <span>الاحتمال من جدول أو شبكة = </span>
+        <span class="frac lg"><span>تكرار النتيجة أو عدد الخلايا المطلوبة</span><span>مجموع التكرارات الكلي</span></span>
+      </div>
+      <div class="formula-banner" style="border-color:var(--accent);color:var(--maroon)">
+        <span>رمي عملتين: <b>٤</b> نواتج متساوية · رمي ثلاث عملات: <b>٨</b> نواتج متساوية</span>
+      </div>
+    </div>
+    <div class="vocab" id="s2VocabList"></div>
+  </section>
+
+  <!-- 2.4 Prior Learning -->
+  <section class="sec" id="s2-prior">
+    <div class="sec-h"><span class="n">٤</span><h2>التعلّم القبلي — الحصة الثانية<small>اضغط على البطاقة لمراجعة الأرقام من ٠٠ إلى ٩٩، ومضاعفات ٣، وأيام السنة</small></h2></div>
+    <div class="flips" id="s2Flips"></div>
+  </section>
+
+  <!-- 2.5 Warmup (Omani 50 Baisa Coins) -->
+  <section class="sec" id="s2-warm">
+    <div class="sec-h"><span class="n">٥</span><h2>التهيئة والتمهيد — الحصة الثانية: استكشاف رمي عملتين معدنيتين<small>عندما يرمي فهد عملتين معدنيتين (٥٠ بيسة عُمانية: ص = صورة، ك = كتابة) توجد ٤ نتائج مُرجَّحة بالتساوي</small></h2></div>
+    <div class="card" style="display:grid;gap:14px">
+      <div class="row" style="justify-content:center;gap:14px">
+        <div class="coin-pair"><span class="coin-disc h">ص</span><span class="coin-disc h">ص</span></div>
+        <div class="coin-pair"><span class="coin-disc h">ص</span><span class="coin-disc t">ك</span></div>
+        <div class="coin-pair"><span class="coin-disc t">ك</span><span class="coin-disc h">ص</span></div>
+        <div class="coin-pair"><span class="coin-disc t">ك</span><span class="coin-disc t">ك</span></div>
+      </div>
+      <div class="scaff-box">
+        <b>سؤال التهيئة الاستكشافي (تمرين ٩ أ):</b> يظن بعض الطلاب أن رمي عملتين يعطي ٣ نتائج فقط (صورتان، كتابتان، صورة وكتابة) فيظن أن احتمال «صورة وكتابة» هو <span class="frac"><span>١</span><span>٣</span></span>. <b>ما الاحتمال الصحيح للحصول على صورة وكتابة؟</b>
+      </div>
+      <div class="row" id="s2WarmBtns">
+        <button class="btn" data-ans="wrong1"><span class="frac"><span>١</span><span>٣</span></span></button>
+        <button class="btn" data-ans="wrong2"><span class="frac"><span>١</span><span>٤</span></span></button>
+        <button class="btn" data-ans="right"><span class="frac"><span>٢</span><span>٤</span></span> = <span class="frac"><span>١</span><span>٢</span></span></button>
+        <button class="btn" data-ans="wrong3"><span class="frac"><span>٣</span><span>٤</span></span></button>
+      </div>
+      <p class="fb" id="s2WarmFb"></p>
+    </div>
+  </section>
+
+  <!-- 2.6 Lesson Flow (35 mins) -->
+  <section class="sec" id="s2-flow">
+    <div class="sec-h"><span class="n">٦</span><h2>سير الحصة الثانية والأنشطة (٣٥ دقيقة)</h2></div>
+    <div class="flow" id="s2FlowList"></div>
+  </section>
+
+  <!-- 2.7 Interactive Lab (Scrabble + 1-40 Grid + April Calendar) -->
+  <section class="sec" id="s2-lab">
+    <div class="sec-h"><span class="n">٧</span><h2>مختبر الجداول والشبكات التفاعلي — الحصة الثانية<small>طبّق تفاعلياً على تمرين (٣) بلاطات سكرابل، وتمرين (٤) شبكة الأعداد ١-٤٠، وتمرين (٥) تقويم أبريل</small></h2></div>
+
+    <!-- Part A: Exercise 3 Scrabble -->
+    <div class="card" style="margin-bottom:16px">
+      <h3>أولاً: تمرين (٣) — بلاطات لعبة «سكرابل» (١٠٠ بلاطة)</h3>
+      <p class="muted" style="margin-bottom:10px">يوجد ١٠٠ بلاطة؛ يعرض الجدول عدد البلاطات التي بها أحرف علة. يتم اختيار بلاطة واحدة عشوائياً. اكتب الكسور في أبسط صورة:</p>
+      <div class="tbl-wrap" style="margin-bottom:12px">
+        <table class="math-tbl">
+          <thead>
+            <tr><th>الحرف</th><th>ا</th><th>و</th><th>ي</th><th>ى</th><th>ء</th><th>مجموع أحرف العلة</th><th>ليست أحرف علة</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>التكرار</b></td><td>٩</td><td>١٢</td><td>٩</td><td>٨</td><td>٤</td><td><b>٤٢</b></td><td><b>٥٨</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid3">
+        <div class="diff-task">
+          <span><b>(أ)</b> احتمال أن يكون الحرف (ا):</span>
+          <div class="row"><div class="frac-inp" id="f3a"><input type="number" id="n3a" placeholder="بسط"><div class="bar"></div><input type="number" id="d3a" placeholder="مقام"></div><span class="fb" id="s3a"></span></div>
+        </div>
+        <div class="diff-task">
+          <span><b>(ب)</b> احتمال الحرف (و) في أبسط صورة:</span>
+          <div class="row"><div class="frac-inp" id="f3b"><input type="number" id="n3b" placeholder="بسط"><div class="bar"></div><input type="number" id="d3b" placeholder="مقام"></div><span class="fb" id="s3b"></span></div>
+        </div>
+        <div class="diff-task">
+          <span><b>(ج)</b> احتمال أن الحرف <b>ليس (ي)</b>:</span>
+          <div class="row"><div class="frac-inp" id="f3c"><input type="number" id="n3c" placeholder="بسط"><div class="bar"></div><input type="number" id="d3c" placeholder="مقام"></div><span class="fb" id="s3c"></span></div>
+        </div>
+        <div class="diff-task">
+          <span><b>(د)</b> احتمال <b>حرف علة</b> (أبسط صورة):</span>
+          <div class="row"><div class="frac-inp" id="f3d"><input type="number" id="n3d" placeholder="بسط"><div class="bar"></div><input type="number" id="d3d" placeholder="مقام"></div><span class="fb" id="s3d"></span></div>
+        </div>
+        <div class="diff-task">
+          <span><b>(هـ)</b> احتمال <b>ليس حرف علة</b> (أبسط صورة):</span>
+          <div class="row"><div class="frac-inp" id="f3e"><input type="number" id="n3e" placeholder="بسط"><div class="bar"></div><input type="number" id="d3e" placeholder="مقام"></div><span class="fb" id="s3e"></span></div>
+        </div>
+        <div class="diff-task" style="align-content:center">
+          <button class="btn pri" id="checkEx3">تحقّق من تمرين (٣)</button>
+          <span class="fb" id="fbEx3"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Part B & C: Exercise 4 Grid & Exercise 5 Calendar -->
+    <div class="grid2">
+      <!-- Exercise 4 -->
+      <div class="card" style="display:grid;gap:12px">
+        <h3>ثانياً: تمرين (٤) — شبكة الأعداد (١ إلى ٤٠)</h3>
+        <p class="muted">اضغط على أزرار التظليل أو انقر على الخلايا لاستكشاف شبكة الأعداد (٤٠ عدداً):</p>
+        <div class="row" id="gridFilters">
+          <button class="btn on" data-gf="27">(أ) العدد ٢٧</button>
+          <button class="btn" data-gf="bottom">(ب) الصف السفلي</button>
+          <button class="btn" data-gf="col1">(ج) العمود الأول</button>
+          <button class="btn" data-gf="notlast">(د) ليس آخر عمودين</button>
+          <button class="btn" data-gf="cols12">أول عمودين (هـ–ح)</button>
+        </div>
+        <div class="num-grid" id="numGrid40"></div>
+        <div class="scaff-box" id="gridInfoBox">العدد ٢٧ يظهر مرة واحدة من ٤٠ عدداً ← <span class="frac"><span>١</span><span>٤٠</span></span></div>
+        <div class="grid2">
+          <div class="diff-task">
+            <span><b>(ب)</b> الصف السفلي (أبسط صورة):</span>
+            <div class="row"><div class="frac-inp" id="f4b"><input type="number" id="n4b" placeholder="بسط"><div class="bar"></div><input type="number" id="d4b" placeholder="مقام"></div><span class="fb" id="s4b"></span></div>
+          </div>
+          <div class="diff-task">
+            <span><b>(د)</b> ليس في آخر عمودين:</span>
+            <div class="row"><div class="frac-inp" id="f4d"><input type="number" id="n4d" placeholder="بسط"><div class="bar"></div><input type="number" id="d4d" placeholder="مقام"></div><span class="fb" id="s4d"></span></div>
+          </div>
+          <div class="diff-task">
+            <span><b>(هـ)</b> من أول عمودين: أصغر من ١٠:</span>
+            <div class="row"><div class="frac-inp" id="f4e"><input type="number" id="n4e" placeholder="بسط"><div class="bar"></div><input type="number" id="d4e" placeholder="مقام"></div><span class="fb" id="s4e"></span></div>
+          </div>
+          <div class="diff-task">
+            <span><b>(و)</b> من أول عمودين: أكبر من ١٠:</span>
+            <div class="row"><div class="frac-inp" id="f4w"><input type="number" id="n4w" placeholder="بسط"><div class="bar"></div><input type="number" id="d4w" placeholder="مقام"></div><span class="fb" id="s4w"></span></div>
+          </div>
+          <div class="diff-task">
+            <span><b>(ز)</b> من أول عمودين: ليس ١٠:</span>
+            <div class="row"><div class="frac-inp" id="f4z"><input type="number" id="n4z" placeholder="بسط"><div class="bar"></div><input type="number" id="d4z" placeholder="مقام"></div><span class="fb" id="s4z"></span></div>
+          </div>
+          <div class="diff-task">
+            <span><b>(ح)</b> من أول عمودين: أكبر من ٢٠:</span>
+            <div class="row"><div class="frac-inp" id="f4h"><input type="number" id="n4h" placeholder="بسط"><div class="bar"></div><input type="number" id="d4h" placeholder="مقام"></div><span class="fb" id="s4h"></span></div>
+          </div>
+        </div>
+        <button class="btn pri" id="checkEx4">تحقّق من تمرين (٤)</button>
+      </div>
+
+      <!-- Exercise 5 -->
+      <div class="card" style="display:grid;gap:12px">
+        <h3>ثالثاً: تمرين (٥) — تقويم شهر أبريل (٣٠ يوماً)</h3>
+        <p class="muted">يختار سامي أحد أيام شهر أبريل عشوائياً. ظلل الأيام في التقويم ثم أجب:</p>
+        <div class="row" id="calFilters">
+          <button class="btn on" data-cf="mon">(أ) الإثنين</button>
+          <button class="btn" data-cf="notmon">(ب) ليس الإثنين</button>
+          <button class="btn" data-cf="d16">(ج) ١٦ أبريل</button>
+          <button class="btn" data-cf="thfr">(هـ) الخميس أو الجمعة</button>
+        </div>
+        <div class="cal-grid" id="aprilCal"></div>
+        <div class="scaff-box" id="calInfoBox">(أ) أيام الإثنين: ٤ أيام من ٣٠ يوماً ← <span class="frac"><span>٤</span><span>٣٠</span></span> = <span class="frac"><span>٢</span><span>١٥</span></span></div>
+        <div class="grid2">
+          <div class="diff-task">
+            <span><b>(أ)</b> يوم الإثنين (أبسط صورة):</span>
+            <div class="row"><div class="frac-inp" id="f5a"><input type="number" id="n5a" placeholder="بسط"><div class="bar"></div><input type="number" id="d5a" placeholder="مقام"></div><span class="fb" id="s5a"></span></div>
+          </div>
+          <div class="diff-task">
+            <span><b>(ب)</b> ليس الإثنين (أبسط صورة):</span>
+            <div class="row"><div class="frac-inp" id="f5b"><input type="number" id="n5b" placeholder="بسط"><div class="bar"></div><input type="number" id="d5b" placeholder="مقام"></div><span class="fb" id="s5b"></span></div>
+          </div>
+          <div class="diff-task">
+            <span><b>(د)</b> ليس ١٦ من أبريل:</span>
+            <div class="row"><div class="frac-inp" id="f5d"><input type="number" id="n5d" placeholder="بسط"><div class="bar"></div><input type="number" id="d5d" placeholder="مقام"></div><span class="fb" id="s5d"></span></div>
+          </div>
+          <div class="diff-task">
+            <span><b>(هـ)</b> الخميس أو الجمعة (أبسط صورة):</span>
+            <div class="row"><div class="frac-inp" id="f5e"><input type="number" id="n5e" placeholder="بسط"><div class="bar"></div><input type="number" id="d5e" placeholder="مقام"></div><span class="fb" id="s5e"></span></div>
+          </div>
+        </div>
+        <button class="btn pri" id="checkEx5">تحقّق من تمرين (٥)</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2.8 Differentiation -->
+  <section class="sec" id="s2-diff">
+    <div class="sec-h"><span class="n">٨</span><h2>أنشطة التمايز وتفريد التعليم — الحصة الثانية<small>اختر مسارك من تمارين الكتاب (٦) إلى (١٠) وأدخل البسط والمقام في أبسط صورة</small></h2></div>
+    <div class="card">
+      <div class="diff-tabs" id="s2DiffTabs" role="tablist">
+        <button class="diff-tab t1 on" data-level="1">
+          <b>🟢 المسار الأساسي (تمرين ٧: الأرقام من ٠ إلى ٩)</b>
+          <span>أرقام أحادية عشوائية: مضاعفات ٣ والأعداد الأصغر من ٧</span>
+        </button>
+        <button class="diff-tab t2" data-level="2">
+          <b>🟠 المسار المتوسط (تمرين ٦: أيام السنة وتمرين ٨: ٠٠–٩٩)</b>
+          <span>أيام السنة العادية والكبيسة والأرقام الثنائية</span>
+        </button>
+        <button class="diff-tab t3" data-level="3">
+          <b>🔴 المسار المتقدم (تمرين ٩ و ١٠: رمي عملتين وثلاث عملات)</b>
+          <span>فضاء العينة لعملتين (٤ نواتج) وثلاث عملات (٨ نواتج)</span>
+        </button>
+      </div>
+      <div id="s2DiffContent" class="diff-panel"></div>
+    </div>
+  </section>
+
+  <!-- 2.9 Formative Assessment -->
+  <section class="sec" id="s2-formative">
+    <div class="sec-h"><span class="n">٩</span><h2>التقويم التكويني — الحصة الثانية<small>٤ أسئلة اختيار من متعدد بتغذية راجعة وتعليل فوري</small></h2></div>
+    <div class="quiz" id="s2FormQuiz"></div>
+    <p class="score" id="s2FormScore" style="margin-top:10px"></p>
+  </section>
+
+  <!-- 2.10 Final Assessment -->
+  <section class="sec" id="s2-final">
+    <div class="sec-h"><span class="n">١٠</span><h2>التقويم الختامي — الحصة الثانية<small>أجب عن الأسئلة الستة الشاملة للتمارين (٣–١٠) ثم اضغط «صحّح إجاباتي»</small></h2></div>
+    <div class="field" style="max-width:360px;margin-bottom:12px"><label for="s2FinName">اسم الطالب</label><input id="s2FinName" placeholder="اكتب اسمك الثلاثي..." autocomplete="off"></div>
+    <div class="quiz" id="s2FinQuiz"></div>
+    <div class="row" style="margin-top:12px"><button class="btn pri" id="s2FinSubmit">صحّح إجاباتي</button><button class="btn" id="s2FinReset">إعادة المحاولة</button></div>
+    <div id="s2FinResult" style="margin-top:12px"></div>
+  </section>
+
+  <!-- 2.11 Classroom Competition -->
+  <section class="sec" id="s2-comp">
+    <div class="sec-h"><span class="n">١١</span><h2>مسابقة المجموعات الصفية — الحصة الثانية<small>زمن كل سؤال ٣٠ ثانية · ١٠ نقاط للدقة + حتى ٥ نقاط للسرعة</small></h2></div>
+    <div class="comp" id="s2CompBox"></div>
+  </section>
+
+  <!-- 2.12 Homework -->
+  <section class="sec" id="s2-hw">
+    <div class="sec-h"><span class="n">١٢</span><h2>الواجب المنزلي — الحصة الثانية<small>مسائل من تمارين (٦، ٨، ٩، ١٠) مع تجهيز الرسالة لإرسالها إلى المعلم</small></h2></div>
+    <div class="card" style="display:grid;gap:12px">
+      <div class="mail"><span>المعلم: <b>أ/ عماد جابر</b></span><span>·</span><span>البريد الإلكتروني:</span><code>em5555592@gmail.com</code><button class="btn" id="s2CopyMail">نسخ البريد</button></div>
+      <div class="grid3">
+        <div class="field"><label for="s2HwName">اسم الطالب</label><input id="s2HwName" autocomplete="off"></div>
+        <div class="field"><label for="s2HwClass">الصف والشعبة</label><input id="s2HwClass" placeholder="مثال: ٨/١" autocomplete="off"></div>
+        <div class="field"><label for="s2HwGroup">المجموعة</label><input id="s2HwGroup" autocomplete="off"></div>
+      </div>
+      <div id="s2HwTasks" style="display:grid;gap:12px"></div>
+      <div class="row"><button class="btn pri" id="s2HwBuild">جهّز رسالة واجب الحصة الثانية</button></div>
+      <div id="s2HwOut" hidden style="display:grid;gap:10px">
+        <pre class="msg" id="s2HwMsg"></pre>
+        <div class="row"><a class="btn dark" id="s2HwMailto" href="#">فتح البريد وإرسال الواجب</a><button class="btn" id="s2HwCopy">نسخ نص الواجب</button><span class="fb" id="s2HwFb"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2.13 Mind Map -->
+  <section class="sec" id="s2-mind">
+    <div class="sec-h"><span class="n">١٣</span><h2>الخريطة الذهنية — الحصة الثانية</h2></div>
+    <div class="mm-wrap" id="s2MindMap"></div>
+  </section>
+
+  <!-- 2.14 Interactive Game -->
+  <section class="sec" id="s2-game">
+    <div class="sec-h"><span class="n">١٤</span><h2>لعبة الحصة الثانية: تحدّي الشبكة والعملات المعدنية<small>احسب الاحتمال في أبسط صورة بسرعة ودقة لتجميع النقاط</small></h2></div>
+    <div class="card" style="display:grid;gap:12px">
+      <div class="ghead">
+        <span class="score">النقاط: <b class="num" id="s2GPts">٠</b></span>
+        <span class="pill">السؤال: <b class="num" id="s2GQNo">١</b> / ٦</span>
+        <span class="pill">سلسلة الإجابات الصحيحة: <b class="num" id="s2GStreak">٠</b> 🔥</span>
+      </div>
+      <div class="grid2" style="align-items:center">
+        <div id="s2GVisual" style="display:grid;place-items:center;min-height:170px;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center"></div>
+        <div class="game-card">
+          <h3 id="s2GPrompt" style="font-size:18px"></h3>
+          <p class="muted" id="s2GHint" style="font-size:14px"></p>
+          <div class="game-opts" id="s2GOpts"></div>
+          <div class="verdict" id="s2GMsg">اختر الإجابة الصحيحة في أبسط صورة.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="foot">
+  سلطنة عُمان · وزارة التعليم · مدرسة محمد بن القاسم الثقفي (٥-١٠) · محافظة ظفار<br>
+  إعداد وتصميم: <b>أ/ عماد جابر</b>
+</footer>
+
+</div>
+
+<!-- Winner Overlay & Confetti -->
+<div class="overlay" id="winOverlay" hidden>
+  <div style="display:grid;gap:14px;justify-items:center">
+    <p>المجموعة الفائزة</p>
+    <h2 id="winName">—</h2>
+    <p id="winPts"></p>
+    <button class="btn pri" id="winClose">متابعة</button>
+  </div>
+</div>
+<canvas id="confetti" hidden></canvas>
+
+<script>
+(()=>{
+const AR='٠١٢٣٤٥٦٧٨٩';
+const ar=n=>String(n).replace(/\d/g,d=>AR[d]).replace(/\./g,'٫');
+const frac=(n,d)=>`<span class="frac"><span>${ar(n)}</span><span>${ar(d)}</span></span>`;
+
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const LET=['أ','ب','ج','د'];
+const MAIL='em5555592@gmail.com';
+const QT=30, DEFAULT_G=['الصقور','النجوم','المبدعون','الرواد'];
+
+const store={
+  get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},
+  set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+};
+async function copyText(t,fbEl){
+  try{await navigator.clipboard.writeText(t);if(fbEl){fbEl.textContent='تم النسخ بنجاح';fbEl.className='fb ok'}return true}
+  catch(e){if(fbEl){fbEl.textContent='تعذّر النسخ تلقائيًا، حدّد النص وانسخه يدويًا';fbEl.className='fb no'}return false}
+}
+
+/* ---------- Theme Toggle ---------- */
+{
+  const modes=['auto','light','dark'], labels={auto:'تلقائي',light:'نهاري',dark:'ليلي'};
+  let idx=0;
+  $('#themeToggle').onclick=()=>{
+    idx=(idx+1)%modes.length;
+    const m=modes[idx];
+    if(m==='auto')document.documentElement.removeAttribute('data-theme');
+    else document.documentElement.dataset.theme=m;
+    $('#themeToggle').textContent='المظهر: '+labels[m];
+  };
+}
+
+/* ---------- Hero Interactive Canvas (6 Equally Likely Die Faces) ---------- */
+{
+  const cv=$('#heroCanvas'), ctx=cv.getContext('2d');
+  let activeFace=0, timer=0;
+  function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+  function drawDie(cx,cy,size,val,highlight){
+    const r=12;
+    ctx.save();
+    ctx.translate(cx,cy);
+    ctx.beginPath();
+    ctx.roundRect(-size/2,-size/2,size,size,r);
+    ctx.fillStyle=highlight?css('--accent'):css('--card');
+    ctx.fill();
+    ctx.lineWidth=2.5;
+    ctx.strokeStyle=highlight?css('--accent'):css('--line');
+    ctx.stroke();
+
+    ctx.fillStyle=highlight?'#FFFFFF':css('--ink');
+    const d=size*0.26, pr=size*0.085;
+    const pips={
+      1:[[0,0]],
+      2:[[-d,-d],[d,d]],
+      3:[[-d,-d],[0,0],[d,d]],
+      4:[[-d,-d],[d,-d],[-d,d],[d,d]],
+      5:[[-d,-d],[d,-d],[0,0],[-d,d],[d,d]],
+      6:[[-d,-d],[d,-d],[-d,0],[d,0],[-d,d],[d,d]]
+    };
+    pips[val].forEach(([px,py])=>{
+      ctx.beginPath();
+      ctx.arc(px,py,pr,0,Math.PI*2);
+      ctx.fill();
+    });
+    ctx.restore();
+  }
+  function drawHero(){
+    const dpr=devicePixelRatio||1, w=cv.clientWidth, h=cv.clientHeight;
+    if(!w||!h)return;
+    cv.width=w*dpr; cv.height=h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,w,h);
+
+    const cols=3, rows=2, sz=54, gx=76, gy=72;
+    const startX=w/2 - gx, startY=h*0.42 - gy/2;
+    for(let i=0;i<6;i++){
+      const c=i%cols, r=Math.floor(i/cols);
+      drawDie(startX+c*gx, startY+r*gy, sz, i+1, i===activeFace);
+    }
+  }
+  const loop=()=>{
+    if(!RM){
+      timer++;
+      if(timer%75===0){activeFace=(activeFace+1)%6; drawHero();}
+    }
+    requestAnimationFrame(loop);
+  };
+  drawHero(); requestAnimationFrame(loop);
+  window.addEventListener('resize',drawHero);
+}
+
+/* ---------- Master Session Switcher & Sticky Nav Sync ---------- */
+let activeSession='1';
+{
+  const navMap={
+    '#s-goals':'goals',
+    '#s-criteria':'criteria',
+    '#s-vocab':'vocab',
+    '#s-prior':'prior',
+    '#s-warm':'warm',
+    '#s-flow':'flow',
+    '#s-lab':'lab',
+    '#s-diff':'diff',
+    '#s-formative':'formative',
+    '#s-final':'final',
+    '#s-comp':'comp',
+    '#s-hw':'hw',
+    '#s-mind':'mind',
+    '#s-game':'game'
+  };
+
+  function switchSession(sNo){
+    activeSession=sNo;
+    $$('.m-tab').forEach(t=>{
+      const on=t.dataset.session===sNo;
+      t.classList.toggle('on',on);
+      t.setAttribute('aria-selected',on);
+    });
+    $('#pane-1').hidden=(sNo!=='1');
+    $('#pane-2').hidden=(sNo!=='2');
+    $('#navSessionPill').textContent=(sNo==='1'?'الحصة الأولى':'الحصة الثانية');
+    $('#navSessionPill').style.background=(sNo==='1'?'var(--teal)':'var(--accent)');
+    $('#navSessionPill').style.color=(sNo==='1'?'#fff':'var(--accent-ink)');
+
+    $$('#nav a').forEach(a=>{
+      const h=a.getAttribute('href');
+      if(h==='#shareCard')return;
+      const base=a.dataset.base || h.replace(/^#s[12]-/,'#s-');
+      a.dataset.base=base;
+      const key=navMap[base];
+      if(key) a.setAttribute('href',`#s${sNo}-${key}`);
+    });
+    window.dispatchEvent(new Event('resize'));
+  }
+
+  $('#masterTabs').addEventListener('click',e=>{
+    const b=e.target.closest('.m-tab');if(!b)return;
+    switchSession(b.dataset.session);
+  });
+
+  switchSession('1');
+}
+
+/* ---------- Helper Functions for Reusable Modules ---------- */
+function initCriteria(elId, storeKey, list){
+  const el=$('#'+elId);
+  const saved=store.get(storeKey,[]);
+  el.innerHTML=list.map((c,i)=>`<button class="crit" aria-pressed="${saved.includes(i)}" data-i="${i}"><span class="box">✓</span><span>${c}</span></button>`).join('');
+  el.addEventListener('click',e=>{
+    const b=e.target.closest('.crit');if(!b)return;
+    const on=b.getAttribute('aria-pressed')!=='true';
+    b.setAttribute('aria-pressed',on);
+    store.set(storeKey,$$('.crit[aria-pressed="true"]',el).map(x=>+x.dataset.i));
+  });
+}
+
+function initFlips(elId, list){
+  const el=$('#'+elId);
+  el.innerHTML=list.map(f=>`<button class="flip"><span class="q">${f[0]}</span><span class="a" hidden>${f[1]}</span><span class="hint">اضغط لإظهار الإجابة</span></button>`).join('');
+  el.addEventListener('click',e=>{
+    const b=e.target.closest('.flip');if(!b)return;
+    const a=$('.a',b),hn=$('.hint',b);a.hidden=!a.hidden;hn.hidden=!a.hidden;
+  });
+}
+
+function initFlow(elId, list){
+  $('#'+elId).innerHTML=list.map(f=>`<div class="step"><div class="t"><span class="num">${f[0]}</span>${f[1]}</div><div><h3>${f[2]}</h3><div class="roles"><div><b>دور المعلم</b>${f[3]}</div><div><b>دور الطالب</b>${f[4]}</div></div></div></div>`).join('');
+}
+
+function checkFrac(nId,dId,boxId,stId,targetN,targetD){
+  const n=parseInt($('#'+nId).value,10), d=parseInt($('#'+dId).value,10);
+  const box=$('#'+boxId), st=$('#'+stId);
+  if((n===targetN && d===targetD) || (targetN===0 && n===0 && !isNaN(d) && d>0)){
+    box.className='frac-inp ok';
+    st.className='fb ok';
+    st.innerHTML='✓ صحيح '+frac(targetN,targetD);
+    return true;
+  }else if(!isNaN(n) && !isNaN(d) && d!==0 && Math.abs(n/d - targetN/targetD)<1e-6){
+    box.className='frac-inp no';
+    st.className='fb no';
+    st.innerHTML='بسّط الكسر لأبسط صورة';
+    return false;
+  }else{
+    box.className='frac-inp no';
+    st.className='fb no';
+    st.innerHTML='✗ الصواب: '+frac(targetN,targetD);
+    return false;
+  }
+}
+
+function initDiff(tabsId, contentId, prefix, data){
+  const tabs=$('#'+tabsId), content=$('#'+contentId);
+  function render(lvl){
+    const list=data[lvl];
+    content.innerHTML=list.map((item,i)=>`
+      <div class="diff-task">
+        <span class="tag ${item.cls}">${item.tag}</span>
+        <p style="font-weight:700">${item.q}</p>
+        <div class="scaff-box" id="${prefix}_scaff_${lvl}_${i}" hidden>💡 <b>إرشاد للحل:</b> ${item.scaff}</div>
+        <div class="row">
+          <div class="frac-inp" id="${prefix}_box_${lvl}_${i}">
+            <input type="number" id="${prefix}_n_${lvl}_${i}" placeholder="بسط">
+            <div class="bar"></div>
+            <input type="number" id="${prefix}_d_${lvl}_${i}" placeholder="مقام">
+          </div>
+          <button class="btn pri" data-check="${lvl}_${i}">تحقّق</button>
+          <button class="btn" data-hint="${lvl}_${i}">إظهار التلميح</button>
+        </div>
+        <p class="fb" id="${prefix}_fb_${lvl}_${i}"></p>
+      </div>
+    `).join('');
+  }
+  tabs.addEventListener('click',e=>{
+    const b=e.target.closest('.diff-tab');if(!b)return;
+    $$('.diff-tab',tabs).forEach(x=>x.classList.toggle('on',x===b));
+    render(b.dataset.level);
+  });
+  content.addEventListener('click',e=>{
+    const hBtn=e.target.closest('[data-hint]');
+    if(hBtn){const el=$(`#${prefix}_scaff_${hBtn.dataset.hint}`);el.hidden=!el.hidden;return;}
+    const cBtn=e.target.closest('[data-check]');
+    if(cBtn){
+      const [lvl,i]=cBtn.dataset.check.split('_');
+      const item=data[lvl][+i];
+      const ok=checkFrac(`${prefix}_n_${lvl}_${i}`,`${prefix}_d_${lvl}_${i}`,`${prefix}_box_${lvl}_${i}`,`${prefix}_fb_${lvl}_${i}`,item.n,item.d);
+      if(ok) $(`#${prefix}_fb_${lvl}_${i}`).innerHTML='✓ إجابة ممتازة! '+item.sol;
+    }
+  });
+  render('1');
+}
+
+function renderQuiz(box,QS,instant,onScore){
+  box.innerHTML=QS.map((q,i)=>`<div class="qq" data-i="${i}"><div class="qt"><span class="k">${ar(i+1)}.</span><span>${q.q}</span></div><div class="opts">${q.o.map((o,j)=>`<button class="opt" data-j="${j}"><span class="l">${LET[j]}</span><span>${o}</span></button>`).join('')}</div><div class="why" hidden></div></div>`).join('');
+  const ans={};
+  box.onclick=e=>{
+    const b=e.target.closest('.opt');if(!b)return;
+    const card=b.closest('.qq'),i=+card.dataset.i,q=QS[i];if(card.dataset.locked)return;
+    if(instant){
+      card.dataset.locked=1;const j=+b.dataset.j;ans[i]=j;
+      $$('.opt',card).forEach((o,k)=>{if(k===q.a)o.classList.add('right');else if(k===j)o.classList.add('wrong')});
+      const w=$('.why',card);w.hidden=false;w.innerHTML=(j===q.a?'إجابة صحيحة. ':'الإجابة الصحيحة: '+LET[q.a]+'. ')+q.w;
+      onScore&&onScore(Object.keys(ans).filter(k=>ans[k]===QS[k].a).length,Object.keys(ans).length);
+    }else{
+      $$('.opt',card).forEach(o=>o.classList.toggle('sel',o===b));ans[i]=+b.dataset.j;
+    }
+  };
+  return {ans,grade(){
+    let c=0;
+    $$('.qq',box).forEach((card,i)=>{
+      card.dataset.locked=1;const q=QS[i],j=ans[i];
+      $$('.opt',card).forEach((o,k)=>{o.classList.remove('sel');if(k===q.a)o.classList.add('right');else if(k===j)o.classList.add('wrong')});
+      if(j===q.a)c++;const w=$('.why',card);w.hidden=false;w.innerHTML=(j===q.a?'صحيح. ':j==null?'لم تُجب. ':'خطأ. ')+q.w;
+    });
+    return c;
+  }};
+}
+
+function initCompetition(boxId, logKey, CQ){
+  const box=$('#'+boxId);
+  const comp={g:[],qi:0,phase:'setup',left:QT,tick:null,t0:0,ans:{}};
+  function compSetup(){
+    comp.phase='setup'; const n=comp.g.length||4;
+    box.innerHTML=`<div class="ghead"><h3 style="font-size:21px">إعداد المسابقة</h3><button class="btn cFull">ملء الشاشة</button></div>
+    <p class="muted">${ar(CQ.length)} أسئلة · ${ar(QT)} ثانية لكل سؤال. تضغط كل مجموعة على حرف إجابتها، ويُحتسب زمن الإجابة.</p>
+    <div class="row" style="margin:12px 0"><label>عدد المجموعات</label><select class="cN">${[2,3,4,5,6].map(k=>`<option value="${k}" ${k===n?'selected':''}>${ar(k)}</option>`).join('')}</select></div>
+    <div class="groups cNames"></div><div class="row" style="margin-top:14px"><button class="btn pri cStart">ابدأ المسابقة</button></div>
+    <div class="cLog" style="margin-top:16px"></div>`;
+    const names=()=>{const k=+$('.cN',box).value;$('.cNames',box).innerHTML=[...Array(k)].map((_,i)=>`<div class="gp"><label>المجموعة ${ar(i+1)}</label><input value="${(comp.g[i]&&comp.g[i].name)||DEFAULT_G[i]||'المجموعة '+ar(i+1)}"></div>`).join('')};
+    names(); $('.cN',box).onchange=names;
+    $('.cFull',box).onclick=()=>{box.requestFullscreen&&box.requestFullscreen().catch(()=>{})};
+    $('.cStart',box).onclick=()=>{comp.g=$$('.cNames input',box).map(i=>({name:i.value.trim()||'مجموعة',pts:0,correct:0,time:0}));comp.qi=0;askQ()};
+    renderLog();
+  }
+  function askQ(){
+    comp.phase='ask'; comp.ans={}; comp.left=QT; comp.t0=performance.now(); const q=CQ[comp.qi];
+    box.innerHTML=`<div class="ghead"><span class="pill" style="background:transparent;color:inherit;border-color:var(--cline)">السؤال ${ar(comp.qi+1)} من ${ar(CQ.length)}</span><span class="score num cLeft">${ar(QT)} ث</span></div>
+    <div class="timer"><i class="cBar"></i></div><p class="cq">${q.q}</p><div class="copts">${q.o.map((o,j)=>`<div class="copt" data-j="${j}"><span class="l">${LET[j]}</span>${o}</div>`).join('')}</div>
+    <div class="groups">${comp.g.map((g,i)=>`<div class="gp" data-g="${i}"><div class="gn"><span>${g.name}</span><span class="num">${ar(g.pts)}</span></div><div class="gb">${LET.map((l,j)=>`<button data-j="${j}">${l}</button>`).join('')}</div><div class="st muted">بانتظار الإجابة</div></div>`).join('')}</div>
+    <div class="cRev" style="margin-top:12px"></div>`;
+    box.querySelectorAll('.gp').forEach(p=>p.onclick=e=>{
+      const b=e.target.closest('button');if(!b||comp.phase!=='ask')return;
+      const g=+p.dataset.g;if(comp.ans[g])return;
+      const t=(performance.now()-comp.t0)/1000;
+      comp.ans[g]={j:+b.dataset.j,t}; b.classList.add('pick');
+      $('.st',p).textContent=`أجابت خلال ${ar(t.toFixed(1))} ث`;
+      if(Object.keys(comp.ans).length===comp.g.length)reveal();
+    });
+    clearInterval(comp.tick);
+    comp.tick=setInterval(()=>{
+      const el=(performance.now()-comp.t0)/1000; comp.left=Math.max(0,QT-el);
+      const lt=$('.cLeft',box), bar=$('.cBar',box);
+      if(lt)lt.textContent=ar(Math.ceil(comp.left))+' ث';
+      if(bar)bar.style.width=(comp.left/QT*100)+'%';
+      if(comp.left<=0)reveal();
+    },200);
+  }
+  function reveal(){
+    if(comp.phase!=='ask')return; comp.phase='reveal'; clearInterval(comp.tick); const q=CQ[comp.qi];
+    $$('.copt',box).forEach(c=>c.classList.toggle('right',+c.dataset.j===q.a));
+    comp.g.forEach((g,i)=>{
+      const a=comp.ans[i], p=$(`.gp[data-g="${i}"]`,box); let got=0;
+      if(a&&a.j===q.a){
+        got=10+Math.round(5*Math.max(0,QT-a.t)/QT); g.correct++; g.time+=a.t; p.classList.add('ok');
+        $('.st',p).textContent=`صحيح · +${ar(got)} (دقة ١٠ + سرعة ${ar(got-10)})`;
+      }else{
+        p.classList.add('no'); $('.st',p).textContent=a?`خطأ · اختارت ${LET[a.j]}`:'انتهى الوقت';
+      }
+      g.pts+=got; $('.gn .num',p).textContent=ar(g.pts);
+    });
+    const last=comp.qi===CQ.length-1;
+    $('.cRev',box).innerHTML=`<div class="card"><b>التغذية الراجعة:</b> الإجابة الصحيحة (${LET[q.a]}) ${q.o[q.a]}. ${q.w}</div><div class="row" style="margin-top:10px"><button class="btn pri cNext">${last?'عرض النتائج':'السؤال التالي'}</button></div>`;
+    $('.cNext',box).onclick=()=>{if(last)finish();else{comp.qi++;askQ()}};
+  }
+  function ranked(){return comp.g.map((g,i)=>({...g,i})).sort((a,b)=>b.pts-a.pts||b.correct-a.correct||a.time-b.time)}
+  function finish(){
+    comp.phase='done'; const r=ranked(), top=r[0], win=r.filter(g=>g.pts===top.pts&&g.correct===top.correct&&Math.abs(g.time-top.time)<.05);
+    box.innerHTML=`<div class="ghead"><h3 style="font-size:21px">النتائج النهائية</h3><button class="btn cAgain">مسابقة جديدة</button></div>
+    <div class="tbl-wrap"><table class="board"><thead><tr><th>الترتيب</th><th>المجموعة</th><th>الإجابات الصحيحة</th><th>زمن الإجابة</th><th>النقاط</th></tr></thead><tbody>
+    ${r.map((g,k)=>`<tr class="${win.includes(g)?'win':''}"><td class="num">${ar(k+1)}</td><td>${g.name}</td><td class="num">${ar(g.correct)} / ${ar(CQ.length)}</td><td class="num">${ar(g.time.toFixed(1))} ث</td><td class="num">${ar(g.pts)}</td></tr>`).join('')}</tbody></table></div>
+    <div class="row" style="margin-top:12px"><button class="btn pri cSave">حفظ في سجل الدرجات</button><button class="btn cCopy">نسخ الدرجات (Excel)</button><button class="btn cShow">إعلان الفائز</button><span class="fb cFb"></span></div>
+    <div class="cLog" style="margin-top:16px"></div>`;
+    const tsv=()=>['الترتيب\tالمجموعة\tالصحيحة\tالزمن\tالنقاط',...r.map((g,k)=>`${k+1}\t${g.name}\t${g.correct}\t${g.time.toFixed(1)}\t${g.pts}`)].join('\n');
+    $('.cCopy',box).onclick=()=>copyText(tsv(),$('.cFb',box));
+    $('.cSave',box).onclick=()=>{
+      const log=store.get(logKey,[]);
+      log.unshift({d:new Date().toLocaleString('ar-OM'),r:r.map(g=>({n:g.name,c:g.correct,p:g.pts}))});
+      store.set(logKey,log.slice(0,20));
+      $('.cFb',box).className='fb ok'; $('.cFb',box).textContent='حُفظت في سجل الجهاز'; renderLog();
+    };
+    $('.cAgain',box).onclick=compSetup; $('.cShow',box).onclick=()=>announce(win); renderLog(); announce(win);
+  }
+  function renderLog(){
+    const el=$('.cLog',box);if(!el)return;const log=store.get(logKey,[]);if(!log.length){el.innerHTML='';return}
+    el.innerHTML=`<h3 style="font-size:17px;margin-bottom:6px">سجل الدرجات</h3><div class="tbl-wrap"><table class="board"><thead><tr><th>التاريخ</th><th>المجموعة · النقاط</th></tr></thead><tbody>${log.map(s=>`<tr><td>${s.d}</td><td>${s.r.map(g=>`${g.n}: ${ar(g.p)}`).join(' · ')}</td></tr>`).join('')}</tbody></table></div>`;
+  }
+  compSetup();
+}
+
+function announce(win){
+  $('#winName').textContent=win.map(g=>g.name).join(' و ');
+  $('#winPts').textContent=`${ar(win[0].pts)} نقطة · ${ar(win[0].correct)} إجابات صحيحة`;
+  $('#winOverlay').hidden=false; confetti();
+}
+$('#winClose').onclick=()=>{$('#winOverlay').hidden=true;$('#confetti').hidden=true};
+function confetti(){
+  if(RM)return;const c=$('#confetti'),x=c.getContext('2d');c.hidden=false;c.width=innerWidth;c.height=innerHeight;
+  const cols=['#F0A445','#3AB1A6','#E0677C','#4C70C8','#8A63B5','#6FA93A'];
+  const P=[...Array(150)].map(()=>({x:Math.random()*c.width,y:-Math.random()*c.height,vy:2+Math.random()*3,vx:-1+Math.random()*2,r:Math.random()*6.3,s:6+Math.random()*8,c:cols[Math.random()*6|0]}));
+  const t0=performance.now();
+  const f=now=>{
+    x.clearRect(0,0,c.width,c.height);
+    P.forEach(p=>{p.y+=p.vy;p.x+=p.vx;p.r+=.1;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);x.restore()});
+    if(now-t0<4500&&!c.hidden)requestAnimationFrame(f);else x.clearRect(0,0,c.width,c.height);
+  };
+  requestAnimationFrame(f);
+}
+
+function initHomework(prefix, storeKey, sessionTitle, tasks){
+  $(`#${prefix}HwTasks`).innerHTML=tasks.map((t,i)=>`<div class="field"><label for="${prefix}Hw${i}">${ar(i+1)}. ${t}</label><textarea id="${prefix}Hw${i}"></textarea></div>`).join('');
+  const saved=store.get(storeKey,{});
+  [`${prefix}HwName`,`${prefix}HwClass`,`${prefix}HwGroup`,...tasks.map((_,i)=>`${prefix}Hw${i}`)].forEach(id=>{
+    const el=$('#'+id);if(saved[id])el.value=saved[id];
+    el.addEventListener('input',()=>{saved[id]=el.value;store.set(storeKey,saved)});
+  });
+  $(`#${prefix}CopyMail`).onclick=e=>copyText(MAIL).then(ok=>{e.target.textContent=ok?'تم النسخ':'حدّد البريد وانسخه'});
+  $(`#${prefix}HwBuild`).onclick=()=>{
+    const nm=$(`#${prefix}HwName`).value.trim()||'—', cl=$(`#${prefix}HwClass`).value.trim()||'—', gr=$(`#${prefix}HwGroup`).value.trim()||'—';
+    const body=`الواجب المنزلي: ${sessionTitle} (الدرس ٧-٢)\nإعداد المعلم: أ/ عماد جابر - مدرسة محمد بن القاسم الثقفي\nالاسم: ${nm}\nالصف: ${cl}\nالمجموعة: ${gr}\n\n`+
+      tasks.map((t,i)=>`${ar(i+1)}) ${t}\nالحل: ${$(`#${prefix}Hw${i}`).value.trim()||'—'}`).join('\n\n');
+    $(`#${prefix}HwMsg`).textContent=body; $(`#${prefix}HwOut`).hidden=false;
+    $(`#${prefix}HwMailto`).href=`mailto:${MAIL}?subject=${encodeURIComponent('واجب '+sessionTitle+' - '+nm+' - '+cl)}&body=${encodeURIComponent(body)}`;
+  };
+  $(`#${prefix}HwCopy`).onclick=()=>copyText($(`#${prefix}HwMsg`).textContent,$(`#${prefix}HwFb`));
+}
+
+function initGame(prefix, challenges){
+  let idx=0, pts=0, streak=0, locked=false;
+  function load(){
+    locked=false; const c=challenges[idx];
+    $(`#${prefix}GQNo`).textContent=ar(idx+1); $(`#${prefix}GPts`).textContent=ar(pts); $(`#${prefix}GStreak`).textContent=ar(streak);
+    $(`#${prefix}GVisual`).innerHTML=`<div style="font-size:13.5px;color:var(--muted);font-weight:600">التجربة العشوائية</div><div style="font-family:var(--display);font-weight:800;font-size:23px;color:var(--teal);margin:6px 0">${c.given}</div><div class="pill">المطلوب: الاحتمال في أبسط صورة</div>`;
+    $(`#${prefix}GPrompt`).textContent=c.q; $(`#${prefix}GHint`).innerHTML='تلميح: '+c.h;
+    $(`#${prefix}GMsg`).className='verdict'; $(`#${prefix}GMsg`).textContent='اختر الإجابة الصحيحة في أبسط صورة.';
+    $(`#${prefix}GOpts`).innerHTML=c.opts.map((o,i)=>`<button class="btn" data-i="${i}">${o}</button>`).join('');
+  }
+  $(`#${prefix}GOpts`).addEventListener('click',e=>{
+    const b=e.target.closest('button');if(!b||locked)return;
+    locked=true; const chosen=+b.dataset.i, c=challenges[idx];
+    if(chosen===c.a){
+      pts+=15; streak++; b.classList.add('pri');
+      $(`#${prefix}GMsg`).className='verdict ok'; $(`#${prefix}GMsg`).textContent='أحسنت! +١٥ نقطة.';
+    }else{
+      streak=0; $(`#${prefix}GMsg`).className='verdict no'; $(`#${prefix}GMsg`).innerHTML='إجابة غير صحيحة. الصواب: '+c.opts[c.a];
+    }
+    $(`#${prefix}GPts`).textContent=ar(pts); $(`#${prefix}GStreak`).textContent=ar(streak);
+    setTimeout(()=>{idx=(idx+1)%challenges.length;load()},1600);
+  });
+  load();
+}
+
+/* ===================================================================== */
+/* ====================== SESSION 1 DATA & LOGIC ======================= */
+/* ===================================================================== */
+
+initCriteria('s1CritList','prob8-72-s1-crit',[
+  'أستطيع أن أُحدّد ما إذا كانت نتائج تجربة عشوائية مُرجَّحة بالتساوي أم لا.',
+  'أستطيع أن أكتب احتمال وقوع حدث في صورة كسر اعتيادي (بسط ومقام).',
+  'أستطيع أن أُبسّط كسر الاحتمال الناتج إلى أبسط صورة دائماً.',
+  'أستطيع أن أحل مسائل على سحب بطاقات الحروف (مثل «الموسوعة» و«رياضيَّات») ورمي حجر النرد.'
+]);
+
+$('#s1VocabList').innerHTML=[
+  ['الاحتمالات المرجحة بالتساوي','نواتج تجربة عشوائية لها جميعها نفس فرصة الحدوث تماماً (متكافئة الفرص)، مثل أوجه حجر النرد المنتظم الستة.','--f1'],
+  ['الاختيار العشوائي','أن يتساوى احتمال اختيار أي عنصر من عناصر المجموعة دون تحيّز، مثل سحب بطاقة من كيس دون النظر إليها.','--f2'],
+  ['أبسط صورة للكسر','قسمة كل من البسط والمقام على العامل المشترك الأكبر لهما؛ مثلاً: '+frac(4,6)+' = '+frac(2,3)+' و '+frac(2,8)+' = '+frac(1,4)+'.','--f4'],
+  ['الحدث المتمم (عدم الحدوث)','احتمال ألا تقع النتيجة = ١ − احتمال وقوعها؛ مثلاً في كلمة «الموسوعة»: ل(ليس و) = ١ − '+frac(1,4)+' = '+frac(3,4)+'.','--f3']
+].map(v=>`<div class="term"><b style="color:var(${v[2]})">${v[0]}</b><p>${v[1]}</p></div>`).join('');
+
+initFlips('s1Flips',[
+  ['ما العدد الكلي للنواتج المرجحة بالتساوي عند رمي حجر نرد ذي ستة أوجه؟','٦ نواتج متساوية هي {١، ٢، ٣، ٤، ٥، ٦}، واحتمال ظهور كل عدد هو '+frac(1,6)+'.'],
+  ['ما العدد الكلي للنواتج المرجحة بالتساوي عند اختيار شهر من السنة؟','١٢ شهراً محتملاً، واحتمال اختيار شهر يوليو عشوائياً هو '+frac(1,12)+'.'],
+  ['كيف نُبسّط الكسر '+frac(4,6)+' إلى أبسط صورة؟','نقسم كلاً من البسط والمقام على ٢: '+frac('٤ ÷ ٢','٦ ÷ ٢')+' = '+frac(2,3)+'.'],
+  ['كيف نُبسّط الكسر '+frac(2,8)+' إلى أبسط صورة؟','نقسم البسط والمقام على ٢: '+frac('٢ ÷ ٢','٨ ÷ ٢')+' = '+frac(1,4)+'.']
+]);
+
+/* Session 1 Warmup */
+{
+  const ITEMS=[
+    ['رمي حجر نرد ذي ستة أوجه','ما احتمال أن يكون العدد أصغر من ٥؟',frac(2,3),[frac(4,5),frac(2,3),frac(1,6),frac(5,6)],'٤ أعداد أصغر من ٥ (١، ٢، ٣، ٤) من ٦ ← '+frac(4,6)+' = '+frac(2,3)],
+    ['اختيار شهر من السنة عشوائياً','ما احتمال اختيار شهر يوليو؟',frac(1,12),[frac(7,12),frac(1,12),frac(1,30),frac(11,12)],'يوليو شهر واحد من ١٢ شهراً متساوي الاحتمال ← '+frac(1,12)],
+    ['سحب بطاقة من حروف «الموسوعة» (٨ بطاقات)','ما احتمال أن يكون الحرف (و)؟',frac(1,4),[frac(2,7),frac(1,4),frac(1,8),frac(3,4)],'بطاقتان عليهما (و) من أصل ٨ بطاقات ← '+frac(2,8)+' = '+frac(1,4)]
+  ];
+  $('#s1WarmItems').innerHTML=ITEMS.map((it,i)=>`<div class="item" data-i="${i}"><b>${it[0]}</b><span class="pill">${it[1]}</span><div class="row">${it[3].map((opt,oi)=>`<button class="btn" data-oi="${oi}">${opt}</button>`).join('')}</div><p class="fb"></p></div>`).join('');
+  const done={};
+  $('#s1WarmItems').addEventListener('click',e=>{
+    const b=e.target.closest('button[data-oi]');if(!b)return;
+    const card=b.closest('.item'), it=ITEMS[+card.dataset.i], fb=$('.fb',card);
+    const chosen=it[3][+b.dataset.oi];
+    const ok=chosen===it[2]; done[card.dataset.i]=ok;
+    fb.className='fb '+(ok?'ok':'no');
+    fb.innerHTML=ok?'صحيح! '+it[4]:'حاول مجددًا: اقسم عدد النواتج المطلوبة على الكلي وبسّط الكسر.';
+    const c=Object.values(done).filter(Boolean).length;
+    $('#s1WarmScore').textContent=`إجابات صحيحة: ${ar(c)} من ${ar(ITEMS.length)}`;
+    $('#s1WarmScore').className='fb ok';
+  });
+}
+
+initFlow('s1FlowList',[
+  ['٤','دقائق','التهيئة والتمهيد التفاعلي','يعرض أمثلة الكتاب التمهيدية (رمي حجر النرد واختيار شهر يوليو) ويؤكد شرط تكافؤ الفرص.','يحل بطاقات التهيئة ذهنياً ويستنتج قانون الاحتمال النظري.'],
+  ['٥','دقائق','التعلّم القبلي ومفردات الدرس','يراجع تبسيط الكسور الاعتيادية والعدد الكلي للنواتج في النرد والأشهر، ويشرح مفردات الحصة.','يسترجع مهارات التبسيط عبر بطاقات التقليب التفاعلية.'],
+  ['٨','دقائق','الاستكشاف: مختبر الفرص المتساوية ومثال (٧-٢)','يشرح مثال (٧-٢) لبطاقات كلمة «الموسوعة» (٨ بطاقات) ويجري محاكاة السحب العشوائي على Canvas.','يختار التجارب والأحداث في المختبر ويلاحظ تظليل النواتج وتبسيط الكسر.'],
+  ['١٠','دقائق','التطبيق المتمايز: تمارين (١) و(٢)','يوجّه الطلاب لاختيار مسارهم المناسب في قسم التمايز لحل تمرين (١) حجر النرد وتمرين (٢) كلمة «رياضيَّات».','يحسب الاحتمالات في أبسط صورة ويتحقق من حلوله مع التوجيه الفوري.'],
+  ['٥','دقائق','مسابقة الحصة الأولى والتقويم التكويني','يدير مسابقة المجموعات الصفية (٣٠ ثانية لكل سؤال) ويعزّز سرعة التبسيط الذهني.','تتنافس المجموعات في المسابقة ويجيب الطالب عن أسئلة التقويم التكويني.'],
+  ['٣','دقائق','الغلق والتقويم الختامي والواجب','يلخّص الحصة الأولى بالخريطة الذهنية ويكلّف الطلاب بواجب الحصة الأولى.','يحل التقويم الختامي للحصة الأولى ويقيّم إتقانه وفق معايير النجاح.']
+]);
+
+/* Session 1 Canvas Lab */
+{
+  const cv=$('#s1LabCanvas'), ctx=cv.getContext('2d');
+  function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+  const EXPS={
+    mawsoa:{
+      badge:'مثال ٧-٢: كلمة «الموسوعة» (٨ بطاقات)',
+      tiles:['ا','ل','م','و','س','و','ع','ة'],
+      events:[
+        {lbl:'الحرف (و)', fn:t=>t==='و', n:1, d:4, exp:'توجد بطاقتان عليهما حرف (و) من أصل ٨ بطاقات ← الاحتمال = '+frac(2,8)+' = '+frac(1,4)},
+        {lbl:'الحرف ليس (و)', fn:t=>t!=='و', n:3, d:4, exp:'٦ بطاقات ليست (و) من ٨ ← '+frac(6,8)+' = '+frac(3,4)+' (أو ١ − '+frac(1,4)+' = '+frac(3,4)+')'},
+        {lbl:'الحرف (م) أو (س)', fn:t=>t==='م'||t==='س', n:1, d:4, exp:'بطاقتان من ٨ بطاقات ← '+frac(2,8)+' = '+frac(1,4)}
+      ]
+    },
+    dice:{
+      badge:'حجر نرد ذو ستة أوجه (تمرين ١)',
+      tiles:['١','٢','٣','٤','٥','٦'],
+      events:[
+        {lbl:'عدد أصغر من ٥', fn:t=>['١','٢','٣','٤'].includes(t), n:2, d:3, exp:'٤ أعداد أصغر من ٥ (١، ٢، ٣، ٤) من ٦ ← '+frac(4,6)+' = '+frac(2,3)},
+        {lbl:'(ب) ليس ٢', fn:t=>t!=='٢', n:5, d:6, exp:'٥ أوجه ليست ٢ من أصل ٦ ← '+frac(5,6)},
+        {lbl:'(د) ليس مضاعف ٣', fn:t=>!['٣','٦'].includes(t), n:2, d:3, exp:'مضاعفات ٣ هي (٣، ٦)، والباقي ٤ أوجه ← '+frac(4,6)+' = '+frac(2,3)}
+      ]
+    },
+    math:{
+      badge:'تمرين (٢): كلمة «رياضيَّات» (٧ بطاقات)',
+      tiles:['ر','ي','ا','ض','ي','ا','ت'],
+      events:[
+        {lbl:'(أ) الحرف ي', fn:t=>t==='ي', n:2, d:7, exp:'يوجد بطاقتان عليهما حرف (ي) من أصل ٧ بطاقات ← '+frac(2,7)},
+        {lbl:'(ب) ليس ي', fn:t=>t!=='ي', n:5, d:7, exp:'١ − '+frac(2,7)+' = '+frac(5,7)},
+        {lbl:'(ج) ض أو ا', fn:t=>t==='ض'||t==='ا', n:3, d:7, exp:'بطاقة (ض) + بطاقتا (ا) = ٣ بطاقات من ٧ ← '+frac(3,7)},
+        {lbl:'(هـ) قبل (ز) أبجدياً', fn:t=>['ا','ت','ر'].includes(t), n:4, d:7, exp:'الحروف قبل (ز) في الترتيب الأبجدي هي: ا، ا، ت، ر (٤ بطاقات) ← '+frac(4,7)}
+      ]
+    }
+  };
+  let curExp='mawsoa', curEvIdx=0, pickedIdx=-1;
+
+  function drawCanvas(){
+    const dpr=devicePixelRatio||1, w=cv.clientWidth, h=cv.clientHeight;
+    if(!w||!h)return;
+    cv.width=w*dpr; cv.height=h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,w,h);
+
+    const ex=EXPS[curExp], ev=ex.events[curEvIdx]||ex.events[0];
+    const items=ex.tiles, count=items.length;
+    const cols=count<=6?3:4;
+    const rows=Math.ceil(count/cols);
+    const cardW=Math.min(72, (w-80)/cols - 12);
+    const cardH=cardW*1.12;
+    const gapX=14, gapY=14;
+    const totalW=cols*cardW + (cols-1)*gapX;
+    const totalH=rows*cardH + (rows-1)*gapY;
+    const startX=(w-totalW)/2;
+    const startY=(h-totalH)/2 + 12;
+
+    items.forEach((lbl,i)=>{
+      const r=Math.floor(i/cols), c=i%cols;
+      const x=startX + c*(cardW+gapX);
+      const y=startY + r*(cardH+gapY);
+      const isHit=ev.fn(lbl);
+      const isPicked=(i===pickedIdx);
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.roundRect(x,y,cardW,cardH,12);
+      ctx.fillStyle=isHit?css('--accent'):css('--card');
+      ctx.fill();
+      ctx.lineWidth=isPicked?4:2;
+      ctx.strokeStyle=isPicked?css('--maroon'):(isHit?css('--accent'):css('--line'));
+      ctx.stroke();
+
+      ctx.fillStyle=isHit?'#FFFFFF':css('--ink');
+      ctx.font='800 26px "Tajawal",sans-serif';
+      ctx.textAlign='center';
+      ctx.textBaseline='middle';
+      ctx.fillText(lbl, x+cardW/2, y+cardH/2);
+      ctx.restore();
+    });
+  }
+
+  function updateLab(){
+    const ex=EXPS[curExp], ev=ex.events[curEvIdx]||ex.events[0];
+    $('#s1LabBadge').textContent=ex.badge;
+    $('#s1EventBtns').innerHTML=ex.events.map((e,i)=>`<button class="btn ${i===curEvIdx?'pri':''}" data-ei="${i}">${e.lbl}</button>`).join('');
+    const fav=ex.tiles.filter(ev.fn).length, tot=ex.tiles.length;
+    $('#s1StFav').textContent=ar(fav);
+    $('#s1StTot').textContent=ar(tot);
+    $('#s1StProb').innerHTML=frac(ev.n,ev.d);
+    $('#s1LabExplain').innerHTML=ev.exp;
+    drawCanvas();
+  }
+
+  $('#s1ExpSeg').addEventListener('click',e=>{
+    const b=e.target.closest('button');if(!b)return;
+    $$('#s1ExpSeg button').forEach(x=>x.classList.toggle('on',x===b));
+    curExp=b.dataset.e; curEvIdx=0; pickedIdx=-1; updateLab();
+  });
+  $('#s1EventBtns').addEventListener('click',e=>{
+    const b=e.target.closest('button');if(!b)return;
+    curEvIdx=+b.dataset.ei; updateLab();
+  });
+  $('#s1DrawBtn').onclick=()=>{
+    const ex=EXPS[curExp], ev=ex.events[curEvIdx]||ex.events[0];
+    pickedIdx=Math.floor(Math.random()*ex.tiles.length);
+    const val=ex.tiles[pickedIdx], hit=ev.fn(val);
+    $('#s1DrawRes').textContent=`النتيجة: (${val}) · ${hit?'تحقق الحدث المطلوب ✓':'لا تحقق الحدث'}`;
+    drawCanvas();
+  };
+  updateLab();
+  window.addEventListener('resize',drawCanvas);
+}
+
+/* Session 1 Differentiation */
+initDiff('s1DiffTabs','s1DiffContent','s1d',{
+  1:[
+    {tag:'تمرين (١ أ) — حجر النرد',cls:'g',q:'يرمي أحمد حجر نرد ذا ستة أوجه. أوجد احتمال أن يكون العدد الظاهر ٢.',scaff:'العدد ٢ يظهر على وجه واحد فقط من أصل ٦ أوجه متساوية.',n:1,d:6,sol:frac(1,6)},
+    {tag:'تمرين (١ ج) — حجر النرد',cls:'g',q:'يرمي أحمد حجر نرد ذا ستة أوجه. أوجد احتمال أن يكون العدد الظاهر ليس ٥.',scaff:'الأوجه التي ليست ٥ هي (١، ٢، ٣، ٤، ٦) وعددها ٥ من ٦.',n:5,d:6,sol:frac(5,6)},
+    {tag:'تمرين (١ د) — حجر النرد (أبسط صورة)',cls:'g',q:'يرمي أحمد حجر نرد ذا ستة أوجه. أوجد احتمال أن يكون العدد الظاهر ليس مضاعف العدد ٣ (في أبسط صورة).',scaff:'مضاعفات ٣ هي (٣، ٦)، والباقي ٤ أوجه ← '+frac(4,6)+' وبسّطه بقسمة البسط والمقام على ٢.',n:2,d:3,sol:frac(4,6)+' = '+frac(2,3)}
+  ],
+  2:[
+    {tag:'تمرين (٢ أ) — كلمة «رياضيَّات»',cls:'m',q:'تكتب فريدة حروف الكلمة (رياضيَّات) على ٧ بطاقات منفصلة وتأخذ بطاقة عشوائياً. أوجد احتمال أن يكون الحرف (ي).',scaff:'تأمل الحروف: ر، ي، ا، ض، ي، ا، ت. كم بطاقة عليها حرف (ي)؟',n:2,d:7,sol:frac(2,7)},
+    {tag:'تمرين (٢ ج) — كلمة «رياضيَّات»',cls:'m',q:'من بطاقات كلمة (رياضيَّات) السبع، أوجد احتمال أن يكون الحرف (ض) أو (ا).',scaff:'حرف (ض) بطاقة واحدة + حرف (ا) بطاقتان = ٣ بطاقات من أصل ٧.',n:3,d:7,sol:frac(3,7)},
+    {tag:'تمرين (٢ هـ) — الترتيب الأبجدي',cls:'m',q:'من بطاقات كلمة (رياضيَّات) السبع، أوجد احتمال أن يكون الحرف قبل (ز) في ترتيب الحروف الأبجديَّة.',scaff:'الحروف الأبجدية قبل (ز) هي: أ، ب، ت، ث، ج، ح، خ، د، ذ، ر، ز. الموجود منها في البطاقات: ا، ا، ت، ر (٤ بطاقات).',n:4,d:7,sol:frac(4,7)}
+  ],
+  3:[
+    {tag:'مسألة إثرائية (١) — كلمة «رياضيَّات»',cls:'h',q:'من بطاقات كلمة (رياضيَّات) السبع، أوجد احتمال ألا يكون الحرف (ض) أو (ا).',scaff:'احتمال (ض أو ا) = '+frac(3,7)+' ← احتمال عدم حدوث ذلك = ١ − '+frac(3,7),n:4,d:7,sol:'١ − '+frac(3,7)+' = '+frac(4,7)},
+    {tag:'مسألة إثرائية (٢) — أشهر السنة الميلادية',cls:'h',q:'يختار طالب شهراً عشوائياً من أشهر السنة الاثني عشر. ما احتمال أن يبدأ اسم الشهر بحرف الميم (مارس، مايو) في أبسط صورة؟',scaff:'الأشهر التي تبدأ بحرف الميم هما شهران (مارس، مايو) من أصل ١٢ شهراً ← '+frac(2,12)+' ثم بسّط.',n:1,d:6,sol:frac(2,12)+' = '+frac(1,6)},
+    {tag:'مسألة إثرائية (٣) — حدث مستحيل',cls:'h',q:'من بطاقات كلمة (رياضيَّات) السبع، ما احتمال سحب الحرف (خ)؟ (اكتب ٠ في البسط و ٧ في المقام)',scaff:'لا يوجد حرف (خ) في كلمة «رياضيَّات»، إذن عدد النواتج المطلوبة = ٠.',n:0,d:7,sol:'٠ (حدث مستحيل).'}
+  ]
+});
+
+/* Session 1 Formative & Final Quizzes */
+const S1_FORM=[
+  {q:'عند رمي حجر نرد ذي ستة أوجه، ما احتمال ظهور عدد أصغر من ٥ في أبسط صورة؟',o:[frac(4,5),frac(2,3),frac(1,6),frac(5,6)],a:1,w:'الأعداد الأصغر من ٥ هي (١، ٢، ٣، ٤) وعددها ٤ من ٦ ← '+frac(4,6)+' = '+frac(2,3)+'.'},
+  {q:'كُتبت حروف كلمة «الموسوعة» (٨ بطاقات) على بطاقات منفصلة. ما احتمال اختيار بطاقة عليها حرف (و) في أبسط صورة؟',o:[frac(2,7),frac(1,4),frac(1,8),frac(3,4)],a:1,w:'بطاقتان عليهما (و) من أصل ٨ بطاقات ← '+frac(2,8)+' = '+frac(1,4)+'.'},
+  {q:'يختار شخص شهراً من السنة عشوائياً. ما احتمال أن يختار شهر يوليو؟',o:[frac(7,12),frac(1,12),frac(1,30),frac(11,12)],a:1,w:'توجد ١٢ نتيجة مُرجَّحة بالتساوي، وشهر يوليو واحد منها ← '+frac(1,12)+'.'},
+  {q:'من بطاقات كلمة «رياضيَّات» (٧ بطاقات)، ما احتمال اختيار بطاقة ليس عليها حرف (ي)؟',o:[frac(2,7),frac(5,7),frac(5,6),frac(1,7)],a:1,w:'حرف (ي) يظهر مرتين، فاحتمال ليس (ي) = ١ − '+frac(2,7)+' = '+frac(5,7)+'.'}
+];
+renderQuiz($('#s1FormQuiz'),S1_FORM,true,(c,n)=>{
+  $('#s1FormScore').textContent=`النتيجة: ${ar(c)} من ${ar(n)}`+(n===S1_FORM.length?(c===n?' · ممتاز!':c>=3?' · أحسنت':' · راجع الأمثلة'):'');
+});
+
+const S1_FIN=[
+  {q:'يرمي أحمد حجر نرد ذا ستة أوجه. ما احتمال ظهور عدد ليس ٢؟',o:[frac(1,6),frac(5,6),frac(2,6),frac(4,6)],a:1,w:'توجد ٥ أوجه ليست ٢ من أصل ٦ أوجه ← '+frac(5,6)+'.'},
+  {q:'يرمي أحمد حجر نرد ذا ستة أوجه. ما احتمال ظهور عدد ليس مضاعفاً للعدد ٣ في أبسط صورة؟',o:[frac(1,3),frac(2,3),frac(4,6),frac(1,2)],a:1,w:'مضاعفات ٣ هي (٣، ٦)، والباقي ٤ أوجه ← '+frac(4,6)+' = '+frac(2,3)+'.'},
+  {q:'كُتبت حروف كلمة «الموسوعة» (٨ بطاقات). ما احتمال اختيار بطاقة ليس عليها حرف (و)؟',o:[frac(1,4),frac(3,4),frac(6,7),frac(7,8)],a:1,w:'١ − '+frac(2,8)+' = '+frac(6,8)+' = '+frac(3,4)+'.'},
+  {q:'من بطاقات كلمة «رياضيَّات» (٧ بطاقات)، ما احتمال اختيار الحرف (ض) أو (ا)؟',o:[frac(2,7),frac(3,7),frac(4,7),frac(1,7)],a:1,w:'بطاقة (ض) + بطاقتا (ا) = ٣ بطاقات من ٧ ← '+frac(3,7)+'.'},
+  {q:'من بطاقات كلمة «رياضيَّات» (٧ بطاقات)، ما احتمال اختيار الحرف (خ)؟',o:[frac(1,7),'٠',frac(7,7),frac(6,7)],a:1,w:'لا يوجد حرف (خ) في البطاقات، فهو حدث مستحيل احتماله ٠.'},
+  {q:'أي مما يلي يمثّل الشرط الأساسي لاستخدام قاعدة الاحتمال النظري؟',o:['أن يكون عدد النواتج زوجياً','أن تكون جميع النواتج مُرجَّحة بالتساوي','أن يكون البسط أكبر من المقام','أن تكون النواتج أقل من ١٠'],a:1,w:'يجب أن تكون كل النتائج لها احتمالات متساوية تماماً.'}
+];
+let s1Fin=renderQuiz($('#s1FinQuiz'),S1_FIN,false);
+$('#s1FinSubmit').onclick=()=>{
+  const c=s1Fin.grade(), n=S1_FIN.length, p=Math.round(c/n*100);
+  const lvl=p>=90?'ممتاز':p>=75?'جيد جدًا':p>=60?'جيد':'يحتاج إلى مراجعة';
+  const nm=$('#s1FinName').value.trim()||'الطالب';
+  $('#s1FinResult').innerHTML=`<div class="result"><span>${nm} · الحصة الأولى</span><b class="num">${ar(c)} / ${ar(n)}</b><span>النسبة ${ar(p)}٪ · المستوى: ${lvl}</span></div>`;
+  $('#s1FinResult').scrollIntoView({behavior:RM?'auto':'smooth',block:'nearest'});
+};
+$('#s1FinReset').onclick=()=>{s1Fin=renderQuiz($('#s1FinQuiz'),S1_FIN,false);$('#s1FinResult').innerHTML=''};
+
+/* Session 1 Competition */
+initCompetition('s1CompBox','prob8-72-s1-comp',[
+  {q:'عند رمي حجر نرد منتظم، ما احتمال ظهور عدد أصغر من ٥ في أبسط صورة؟',o:[frac(4,5),frac(2,3),frac(1,3),frac(5,6)],a:1,w:frac(4,6)+' = '+frac(2,3)+'.'},
+  {q:'من بطاقات كلمة «الموسوعة» (٨ بطاقات)، ما احتمال سحب حرف (و) في أبسط صورة؟',o:[frac(2,8),frac(1,4),frac(1,8),frac(3,4)],a:1,w:frac(2,8)+' = '+frac(1,4)+'.'},
+  {q:'من بطاقات كلمة «الموسوعة» (٨ بطاقات)، ما احتمال سحب حرف ليس (و)؟',o:[frac(1,4),frac(3,4),frac(6,7),frac(5,8)],a:1,w:'١ − '+frac(1,4)+' = '+frac(3,4)+'.'},
+  {q:'يختار شخص شهراً من السنة عشوائياً. ما احتمال اختيار شهر يوليو؟',o:[frac(7,12),frac(1,12),frac(1,31),frac(11,12)],a:1,w:'يوليو شهر واحد من ١٢ شهراً ← '+frac(1,12)+'.'},
+  {q:'من بطاقات كلمة «رياضيَّات» (٧ بطاقات)، ما احتمال سحب الحرف (ي)؟',o:[frac(1,7),frac(2,7),frac(5,7),frac(2,6)],a:1,w:'حرف (ي) مرتان من ٧ بطاقات ← '+frac(2,7)+'.'},
+  {q:'يرمي أحمد حجر نرد ذي ستة أوجه. ما احتمال ظهور عدد ليس مضاعف العدد ٣؟',o:[frac(1,3),frac(2,3),frac(4,6),frac(5,6)],a:1,w:'الأعداد (١، ٢، ٤، ٥) ليست مضاعفات ٣ ← '+frac(4,6)+' = '+frac(2,3)+'.'}
+]);
+
+/* Session 1 Homework */
+initHomework('s1','prob8-72-s1-hw','الحصة الأولى: الاحتمالات المرجحة بالتساوي والبطاقات',[
+  'يرمي أحمد حجر نرد ذا ستة أوجه. أوجد احتمال أن يكون العدد الظاهر: (أ) ٢ ، (ب) ليس ٢ ، (ج) ليس ٥ ، (د) ليس مضاعف العدد ٣ (تمرين ١).',
+  'تكتب فريدة حروف الكلمة (رياضيَّات) على بطاقات منفصلة وتأخذ بطاقة عشوائياً. أوجد احتمال أن يكون الحرف: (أ) ي ، (ب) ليس ي ، (ج) ض أو ا ، (د) خ ، (هـ) حرف قبل (ز) في ترتيب الحروف الأبجديَّة (تمرين ٢).'
+]);
+
+/* Session 1 Mind Map SVG */
+{
+  function svgFrac(x,y,n,d,fill='var(--ink)'){
+    return `<g font-family="IBM Plex Sans Arabic,sans-serif" font-weight="700" font-size="14" fill="${fill}" text-anchor="middle">
+      <text x="${x}" y="${y-4}">${ar(n)}</text>
+      <line x1="${x-14}" y1="${y}" x2="${x+14}" y2="${y}" stroke="${fill}" stroke-width="1.5"/>
+      <text x="${x}" y="${y+14}">${ar(d)}</text>
+    </g>`;
+  }
+  const B=[
+    {t:'شروط التطبيق',x:835,y:70,c:'--f2',l:['جميع النواتج مرجحة بالتساوي','الاختيار يتم عشوائياً دون تحيّز','يُكتب الكسر في أبسط صورة']},
+    {t:'حجر النرد والأشهر',x:835,y:345,c:'--f1',l:['حجر النرد: ٦ أوجه متساوية','أشهر السنة: ١٢ شهراً متساوياً','احتمال كل وجه أو شهر متساوٍ']},
+    {t:'مثال (٧-٢): «الموسوعة»',x:165,y:70,c:'--f3',l:['عدد البطاقات الكلي = ٨ بطاقات','حرف (و) يظهر مرتين (٢ من ٨)','حرف ليس (و) = ٦ من ٨']},
+    {t:'تمرين (٢): «رياضيَّات»',x:165,y:345,c:'--f5',l:['عدد البطاقات الكلي = ٧ بطاقات','حرف (ي) مرتان ، حرف (ا) مرتان','الحرف (خ) غير موجود = ٠']}
+  ];
+  const W=1000, Hh=630, cx=500, cy=285;
+  let s=`<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="خريطة ذهنية للحصة الأولى" style="font-family:'IBM Plex Sans Arabic',sans-serif">`;
+  B.forEach(b=>{s+=`<path d="M${cx},${cy} Q${(cx+b.x)/2},${b.y} ${b.x},${b.y}" style="fill:none;stroke:var(${b.c});stroke-width:5;stroke-linecap:round"/>`});
+  s+=`<path d="M${cx},${cy} L${cx},490" style="fill:none;stroke:var(--f4);stroke-width:5;stroke-linecap:round"/>`;
+
+  B.forEach(b=>{
+    b.l.forEach((_,i)=>{const y=b.y+58+i*46;s+=`<line x1="${b.x}" y1="${b.y+22}" x2="${b.x}" y2="${y}" style="stroke:var(${b.c});stroke-width:2"/>`});
+    s+=`<rect x="${b.x-125}" y="${b.y-24}" width="250" height="48" rx="24" style="fill:var(${b.c})"/><text x="${b.x}" y="${b.y+7}" text-anchor="middle" style="fill:#fff;font-size:18px;font-weight:800;font-family:'Tajawal',sans-serif">${b.t}</text>`;
+    b.l.forEach((l,i)=>{const y=b.y+58+i*46;s+=`<rect x="${b.x-145}" y="${y-17}" width="290" height="34" rx="9" style="fill:var(--soft);stroke:var(${b.c});stroke-width:1.5"/><text x="${b.x}" y="${y+6}" text-anchor="middle" style="fill:var(--ink);font-size:15px">${l}</text>`});
+  });
+
+  s+=`<rect x="350" y="465" width="300" height="48" rx="24" style="fill:var(--f4)"/><text x="500" y="496" text-anchor="middle" style="fill:#fff;font-size:18px;font-weight:800;font-family:'Tajawal',sans-serif">قانون الاحتمال النظري والتبسيط</text>`;
+  s+=`<line x1="500" y1="513" x2="300" y2="560" style="stroke:var(--f4);stroke-width:2"/>`;
+  s+=`<rect x="110" y="545" width="380" height="54" rx="10" style="fill:var(--soft);stroke:var(--f4);stroke-width:1.5"/>`;
+  s+=`<text x="425" y="577" text-anchor="middle" style="fill:var(--ink);font-size:15px;font-weight:700">الاحتمال =</text>`;
+  s+=svgFrac(255, 572, 'عدد النواتج المطلوبة', 'العدد الكلي للنواتج');
+
+  s+=`<line x1="500" y1="513" x2="700" y2="560" style="stroke:var(--f4);stroke-width:2"/>`;
+  s+=`<rect x="520" y="545" width="360" height="54" rx="10" style="fill:var(--soft);stroke:var(--f4);stroke-width:1.5"/>`;
+  s+=`<text x="805" y="577" text-anchor="middle" style="fill:var(--ink);font-size:15px;font-weight:700">مثال التبسيط:</text>`;
+  s+=svgFrac(715, 572, 2, 8);
+  s+=`<text x="680" y="577" text-anchor="middle" style="fill:var(--ink);font-size:16px;font-weight:700">=</text>`;
+  s+=svgFrac(645, 572, 1, 4);
+  s+=`<text x="580" y="577" text-anchor="middle" style="fill:var(--teal);font-size:14px;font-weight:700">(أبسط صورة)</text>`;
+
+  s+=`<rect x="${cx-185}" y="${cy-44}" width="370" height="88" rx="20" style="fill:var(--ink)"/><text x="${cx}" y="${cy-5}" text-anchor="middle" style="fill:var(--paper);font-size:21px;font-weight:800;font-family:'Tajawal',sans-serif">الحصة الأولى: ٧-٢</text><text x="${cx}" y="${cy+27}" text-anchor="middle" style="fill:var(--paper);font-size:20px;font-weight:800;font-family:'Tajawal',sans-serif">الفرص المتساوية والبطاقات</text></svg>`;
+  $('#s1MindMap').innerHTML=s;
+}
+
+/* Session 1 Game */
+initGame('s1',[
+  {given:'حجر نرد ذو ٦ أوجه',q:'ما احتمال ظهور عدد أكبر من ٤ في أبسط صورة؟',h:'الأعداد الأكبر من ٤ هي (٥، ٦) ← ٢ من ٦',opts:[frac(1,6),frac(1,3),frac(2,3),frac(1,2)],a:1},
+  {given:'حروف «الموسوعة» (٨ بطاقات)',q:'ما احتمال اختيار حرف (و) في أبسط صورة؟',h:'حرف (و) مرتان من ٨ بطاقات',opts:[frac(2,7),frac(1,4),frac(1,8),frac(3,4)],a:1},
+  {given:'حروف «رياضيَّات» (٧ بطاقات)',q:'ما احتمال اختيار حرف (ض) أو (ا)؟',h:'(ض) مرة + (ا) مرتان = ٣ من ٧',opts:[frac(3,7),frac(2,7),frac(4,7),frac(1,7)],a:0},
+  {given:'أشهر السنة (١٢ شهراً)',q:'ما احتمال اختيار شهر يبدأ بحرف الميم (مارس، مايو)؟',h:'شهران من ١٢ شهراً ← بسّط الكسر',opts:[frac(2,12),frac(1,6),frac(1,12),frac(1,4)],a:1},
+  {given:'حجر نرد ذو ٦ أوجه',q:'ما احتمال ظهور عدد ليس ٥؟',h:'٥ أوجه ليست ٥ من أصل ٦',opts:[frac(1,6),frac(5,6),frac(4,6),frac(2,3)],a:1},
+  {given:'حروف «الموسوعة» (٨ بطاقات)',q:'ما احتمال اختيار حرف ليس (و)؟',h:'٦ بطاقات ليست (و) من ٨ بطاقات',opts:[frac(1,4),frac(3,4),frac(6,7),frac(7,8)],a:1}
+]);
+
+/* ===================================================================== */
+/* ====================== SESSION 2 DATA & LOGIC ======================= */
+/* ===================================================================== */
+
+initCriteria('s2CritList','prob8-72-s2-crit',[
+  'أستطيع أن أستخرج الاحتمالات في أبسط صورة من الجداول التكرارية (مثل بلاطات سكرابل).',
+  'أستطيع أن أستخدم الشبكات العددية (١ إلى ٤٠) والتقويم الشهري (أبريل) لحساب الاحتمالات.',
+  'أستطيع أن أُحدّد فضاء العينة المرجح بالتساوي لرمي عملتين (٤ نواتج) وثلاث عملات (٨ نواتج).',
+  'أستطيع أن أحسب احتمالات أيام السنة العادية والكبيسة والأرقام الأحادية والثنائية.'
+]);
+
+$('#s2VocabList').innerHTML=[
+  ['فضاء العينة','مجموعة جميع النواتج الممكنة والمُرجَّحة بالتساوي لتجربة عشوائية، مثل {ص ص ، ص ك ، ك ص ، ك ك} عند رمي عملتين.','--f1'],
+  ['التكرار والجدول التكراري','عدد مرات ظهور كل نتيجة في التجربة أو المجموعة، ونقسم تكرار الحدث على المجموع الكلي للنواتج.','--f2'],
+  ['السنة العادية والكبيسة','السنة العادية (مثل ٢٠١٩) تتكون من ٣٦٥ يوماً، أما السنة الكبيسة (مثل ٢٠٢٠) فتتكون من ٣٦٦ يوماً (فبراير ٢٩ يوماً).','--f4'],
+  ['الأرقام الأحادية والثنائية','الأرقام الأحادية (٠ إلى ٩) وعددها ١٠ أرقام، والأعداد الثنائية (٠٠ إلى ٩٩) وعددها ١٠٠ عدد متكافئ الفرص.','--f3']
+].map(v=>`<div class="term"><b style="color:var(${v[2]})">${v[0]}</b><p>${v[1]}</p></div>`).join('');
+
+initFlips('s2Flips',[
+  ['كم عدداً أحادياً يوجد من ٠ إلى ٩؟','توجد ١٠ أرقام أحادية متساوية الفرص هي {٠، ١، ٢، ٣، ٤، ٥، ٦، ٧، ٨، ٩} (احتمال كل رقم '+frac(1,10)+').'],
+  ['كم عدداً ثنائياً يوجد من ٠٠ إلى ٩٩؟','يوجد ١٠٠ عدد متساوي الفرص من ٠٠ إلى ٩٩ (احتمال كل عدد '+frac(1,100)+').'],
+  ['ما الفرق بين عدد أيام السنة ٢٠١٩ والسنة ٢٠٢٠؟','سنة ٢٠١٩ عادية (٣٦٥ يوماً)، وسنة ٢٠٢٠ كبيسة (٣٦٦ يوماً لوجود ٢٩ فبراير).'],
+  ['كم نتيجة مُرجَّحة بالتساوي عند رمي عملتين معدنيتين معاً؟','٤ نتائج متساوية: (ص ص ، ص ك ، ك ص ، ك ك)، وعند رمي ثلاث عملات توجد ٨ نتائج متساوية.']
+]);
+
+/* Session 2 Warmup (Coins) */
+$('#s2WarmBtns').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  const ok=b.dataset.ans==='right';
+  $('#s2WarmFb').className='fb '+(ok?'ok':'no');
+  $('#s2WarmFb').innerHTML=ok
+    ?'✓ ممتاز! لأن «صورة وكتابة» تتحقق بطريقتين مختلفتين: (الأولى صورة والثانية كتابة: ص ك) أو (الأولى كتابة والثانية صورة: ك ص)، فهما نتيجتان من ٤ ← '+frac(2,4)+' = '+frac(1,2)+'.'
+    :'✗ انتبه: لاحظ البطاقات الأربع أعلاه! توجد نتيجتان بهما صورة وكتابة (ص ك) و (ك ص) من أصل ٤ نتائج متساوية.';
+});
+
+initFlow('s2FlowList',[
+  ['٤','دقائق','التهيئة: لغز العملتين المعدنيتين','يعرض النواتج الأربع لرمي عملتين معدنيتين (٥٠ بيسة عُمانية) ويناقش لماذا احتمال صورة وكتابة هو ١ على ٢.','يكتشف الفرق بين (ص ك) و (ك ص) ويحل سؤال التهيئة التفاعلي.'],
+  ['٥','دقائق','التعلّم القبلي ومفاهيم الجداول والشبكات','يراجع الأرقام الأحادية (١٠ أرقام) والثنائية (١٠٠ عدد) وعدد أيام السنة العادية والكبيسة.','يسترجع المفاهيم عبر بطاقات التقليب التفاعلية.'],
+  ['٨','دقائق','مختبر الجداول والشبكات: تمارين (٣) و(٤) و(٥)','يوجّه الطلاب لاستخدام جدول «سكرابل»، وشبكة الأعداد التفاعلية (١-٤٠)، وتقويم شهر أبريل.','يظلل الخلايا والأيام المطلوبة في الشبكة والتقويم ويحسب الكسور في أبسط صورة.'],
+  ['١٠','دقائق','أنشطة التمايز: تمارين (٦) إلى (١٠)','يوزّع الطلاب على المسارات الثلاثة (الأرقام ٠-٩، أيام السنة والأعداد ٠٠-٩٩، رمي عملتين وثلاث عملات).','يحل مسائل مساره مستعيناً بالتلميحات الموجهة ويتحقق من إجاباته فوراً.'],
+  ['٥','دقائق','مسابقة الحصة الثانية والتقويم التكويني','يدير مسابقة المجموعات الصفية للحصة الثانية (٣٠ ثانية لكل سؤال).','تتنافس المجموعات في المسابقة ويجيب الطالب عن أسئلة التقويم التكويني.'],
+  ['٣','دقائق','الغلق والتقويم الختامي والواجب','يلخّص الحصة الثانية بالخريطة الذهنية ويكلّف الطلاب بواجب الحصة الثانية.','يحل التقويم الختامي للحصة الثانية ويرسل الواجب المنزلي للمعلم.']
+]);
+
+/* Session 2 Exercise 3 (Scrabble) */
+$('#checkEx3').onclick=()=>{
+  let ok=0;
+  if(checkFrac('n3a','d3a','f3a','s3a',9,100))ok++;
+  if(checkFrac('n3b','d3b','f3b','s3b',3,25))ok++;
+  if(checkFrac('n3c','d3c','f3c','s3c',91,100))ok++;
+  if(checkFrac('n3d','d3d','f3d','s3d',21,50))ok++;
+  if(checkFrac('n3e','d3e','f3e','s3e',29,50))ok++;
+  $('#fbEx3').className='fb '+(ok===5?'ok':'no');
+  $('#fbEx3').textContent=`أجبت بشكل صحيح على ${ar(ok)} من ٥ فروع.`;
+};
+
+/* Session 2 Exercise 4 (Grid 1-40) & Exercise 5 (April Calendar) */
+{
+  const gridEl=$('#numGrid40');
+  for(let n=1;n<=40;n++){
+    const d=document.createElement('div');
+    d.className='num-cell'; d.dataset.n=n; d.textContent=ar(n);
+    d.onclick=()=>d.classList.toggle('hl');
+    gridEl.appendChild(d);
+  }
+  const FILTERS40={
+    '27':{fn:n=>n===27, txt:'(أ) العدد ٢٧: يظهر مرة واحدة من ٤٠ عدداً ← '+frac(1,40)},
+    'bottom':{fn:n=>n>=33&&n<=40, txt:'(ب) الصف السفلي (٣٣ إلى ٤٠): ٨ أعداد من ٤٠ ← '+frac(8,40)+' = '+frac(1,5)},
+    'col1':{fn:n=>n%8===1, txt:'(ج) العمود الأول (١، ٩، ١٧، ٢٥، ٣٣): ٥ أعداد من ٤٠ ← '+frac(5,40)+' = '+frac(1,8)},
+    'notlast':{fn:n=>(n%8!==7 && n%8!==0), txt:'(د) ليس في آخر عمودين: ٣٠ عدداً من ٤٠ ← '+frac(30,40)+' = '+frac(3,4)},
+    'cols12':{fn:n=>(n%8===1 || n%8===2), txt:'أول عمودين (١٠ أعداد: ١،٢،٩،١٠،١٧،١٨،٢٥،٢٦،٣٣،٣٤): (هـ) أصغر من ١٠ = '+frac(4,10)+'='+frac(2,5)+' ، (و) أكبر من ١٠ = '+frac(5,10)+'='+frac(1,2)+' ، (ز) ليس ١٠ = '+frac(9,10)+' ، (ح) أكبر من ٢٠ = '+frac(4,10)+'='+frac(2,5)}
+  };
+  function applyGridFilter(key){
+    const f=FILTERS40[key];
+    $$('.num-cell',gridEl).forEach(c=>c.classList.toggle('hl',f.fn(+c.dataset.n)));
+    $('#gridInfoBox').innerHTML=f.txt;
+  }
+  $('#gridFilters').addEventListener('click',e=>{
+    const b=e.target.closest('button');if(!b)return;
+    $$('#gridFilters button').forEach(x=>x.classList.toggle('on',x===b));
+    applyGridFilter(b.dataset.gf);
+  });
+  applyGridFilter('27');
+
+  $('#checkEx4').onclick=()=>{
+    checkFrac('n4b','d4b','f4b','s4b',1,5);
+    checkFrac('n4d','d4d','f4d','s4d',3,4);
+    checkFrac('n4e','d4e','f4e','s4e',2,5);
+    checkFrac('n4w','d4w','f4w','s4w',1,2);
+    checkFrac('n4z','d4z','f4z','s4z',9,10);
+    checkFrac('n4h','d4h','f4h','s4h',2,5);
+  };
+
+  /* April Calendar */
+  const calEl=$('#aprilCal');
+  const days=['الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد'];
+  days.forEach(d=>{const h=document.createElement('div');h.className='cal-hd';h.textContent=d;calEl.appendChild(h)});
+  for(let i=0;i<2;i++){const e=document.createElement('div');e.className='cal-day empty';calEl.appendChild(e)}
+  for(let d=1;d<=30;d++){
+    const c=document.createElement('div');
+    c.className='cal-day'; c.dataset.d=d; c.textContent=ar(d);
+    c.onclick=()=>c.classList.toggle('hl');
+    calEl.appendChild(c);
+  }
+  for(let i=0;i<3;i++){const e=document.createElement('div');e.className='cal-day empty';calEl.appendChild(e)}
+
+  const CAL_FILTERS={
+    mon:{fn:d=>[6,13,20,27].includes(d), txt:'(أ) أيام الإثنين (٦، ١٣، ٢٠، ٢٧): ٤ أيام من ٣٠ ← '+frac(4,30)+' = '+frac(2,15)},
+    notmon:{fn:d=>![6,13,20,27].includes(d), txt:'(ب) ليس الإثنين: ٢٦ يوماً من ٣٠ ← '+frac(26,30)+' = '+frac(13,15)},
+    d16:{fn:d=>d===16, txt:'(ج) يوم ١٦ من أبريل: يوم واحد من ٣٠ ← '+frac(1,30)+' ، و(د) ليس ١٦ من أبريل = '+frac(29,30)},
+    thfr:{fn:d=>[2,9,16,23,30,3,10,17,24].includes(d), txt:'(هـ) الخميس (٥ أيام) أو الجمعة (٤ أيام) = ٩ أيام من ٣٠ ← '+frac(9,30)+' = '+frac(3,10)}
+  };
+  function applyCalFilter(key){
+    const f=CAL_FILTERS[key];
+    $$('.cal-day[data-d]',calEl).forEach(c=>c.classList.toggle('hl',f.fn(+c.dataset.d)));
+    $('#calInfoBox').innerHTML=f.txt;
+  }
+  $('#calFilters').addEventListener('click',e=>{
+    const b=e.target.closest('button');if(!b)return;
+    $$('#calFilters button').forEach(x=>x.classList.toggle('on',x===b));
+    applyCalFilter(b.dataset.cf);
+  });
+  applyCalFilter('mon');
+
+  $('#checkEx5').onclick=()=>{
+    checkFrac('n5a','d5a','f5a','s5a',2,15);
+    checkFrac('n5b','d5b','f5b','s5b',13,15);
+    checkFrac('n5d','d5d','f5d','s5d',29,30);
+    checkFrac('n5e','d5e','f5e','s5e',3,10);
+  };
+}
+
+/* Session 2 Differentiation */
+initDiff('s2DiffTabs','s2DiffContent','s2d',{
+  1:[
+    {tag:'تمرين (٧ ب) — الأرقام من ٠ إلى ٩',cls:'g',q:'يكوّن الحاسب الآلي بشكل عشوائي عدداً من أرقام أحادية (من ٠ إلى ٩، وعددها ١٠ أرقام). أوجد احتمال أن يكون العدد ليس ٠.',scaff:'توجد ١٠ أرقام متساوية الفرص؛ رقم واحد هو ٠ والباقي ٩ أرقام.',n:9,d:10,sol:frac(9,10)},
+    {tag:'تمرين (٧ د) — الأرقام من ٠ إلى ٩',cls:'g',q:'من الأرقام الأحادية العشوائية (من ٠ إلى ٩)، أوجد احتمال أن يكون العدد ٣ أو ٥ (في أبسط صورة).',scaff:'العددان ٣ و ٥ هما رقمان من أصل ١٠ أرقام ← '+frac(2,10)+' وبسّط الكسر.',n:1,d:5,sol:frac(2,10)+' = '+frac(1,5)},
+    {tag:'تمرين (٧ هـ) — الأرقام من ٠ إلى ٩',cls:'g',q:'من الأرقام الأحادية العشوائية (من ٠ إلى ٩)، أوجد احتمال أن يكون العدد أصغر من ٧.',scaff:'الأرقام الأصغر من ٧ هي: ٠، ١، ٢، ٣، ٤، ٥، ٦ (٧ أرقام من أصل ١٠).',n:7,d:10,sol:frac(7,10)}
+  ],
+  2:[
+    {tag:'تمرين (٦ أ-٣) — أيام السنة ٢٠١٩ (٣٦٥ يوماً)',cls:'m',q:'تختار عائشة يوماً واحداً عشوائياً من السنة ٢٠١٩ (٣٦٥ يوماً). ما احتمال أن يكون اليوم في شهر أغسطس (٣١ يوماً)؟',scaff:'عدد أيام شهر أغسطس = ٣١ يوماً من أصل ٣٦٥ يوماً.',n:31,d:365,sol:frac(31,365)},
+    {tag:'تمرين (٨ ب) — الأرقام الثنائية (٠٠ إلى ٩٩)',cls:'m',q:'يكوّن الحاسب عشوائياً عدداً من أرقام ثنائية من ٠٠ إلى ٩٩ (١٠٠ عدد). أوجد احتمال أن العدد ليس ٩٩.',scaff:'يوجد ١٠٠ عدد، واحد منها هو ٩٩ والباقي ٩٩ عدداً.',n:99,d:100,sol:frac(99,100)},
+    {tag:'تمرين (٨ ج) — لا يتضمّن تسعات',cls:'m',q:'من الأعداد من ٠٠ إلى ٩٩ (١٠٠ عدد)، ما احتمال أن العدد لا يتضمّن تسعات؟',scaff:'الأعداد التي تحوي ٩ هي ١٩ عدداً (٠٩، ١٩.. ٨٩، و ٩٠.. ٩٩)، فيكون الباقي ١٠٠ − ١٩ = ٨١ عدداً.',n:81,d:100,sol:frac(81,100)}
+  ],
+  3:[
+    {tag:'تمرين (٩ ب-١) — رمي عملتين معدنيتين',cls:'h',q:'إذا رُميت عملتان معدنيتان معاً (٤ نتائج مُرجَّحة بالتساوي)، ما احتمال الحصول على العملتين صورة؟',scaff:'فضاء العينة {ص ص ، ص ك ، ك ص ، ك ك}؛ نتيجة واحدة فقط (ص ص) من ٤.',n:1,d:4,sol:frac(1,4)},
+    {tag:'تمرين (١٠ ب-١) — رمي ثلاث عملات (٨ نواتج)',cls:'h',q:'ترمي سارة ثلاث عملات معدنية معاً (توجد ٨ نتائج مُرجَّحة بالتساوي). أوجد احتمال الحصول على ثلاث عملات صورة.',scaff:'توجد نتيجة واحدة فقط (ص ص ص) من أصل ٨ نتائج متساوية.',n:1,d:8,sol:frac(1,8)},
+    {tag:'تمرين (١٠ ب-٣) — رمي ثلاث عملات (٨ نواتج)',cls:'h',q:'ترمي سارة ثلاث عملات معدنية معاً. أوجد احتمال الحصول على عملتين صورة والأخرى كتابة.',scaff:'النواتج التي بها صورتان وكتابة واحدة هي: (ص ص ك ، ص ك ص ، ك ص ص) وعددها ٣ من ٨.',n:3,d:8,sol:frac(3,8)}
+  ]
+});
+
+/* Session 2 Formative & Final Quizzes */
+const S2_FORM=[
+  {q:'في لعبة «سكرابل» (١٠٠ بلاطة)، توجد ١٢ بلاطة عليها حرف (و). ما احتمال اختيار حرف (و) في أبسط صورة؟',o:[frac(12,100),frac(3,25),frac(6,50),frac(1,12)],a:1,w:frac(12,100)+' بقسمة البسط والمقام على ٤ = '+frac(3,25)+'.'},
+  {q:'في شبكة الأعداد من ١ إلى ٤٠، ما احتمال اختيار عدد يقع في الصف السفلي (٣٣ إلى ٤٠)؟',o:[frac(1,8),frac(1,5),frac(8,32),frac(1,4)],a:1,w:'الصف السفلي يحوي ٨ أعداد من ٤٠ ← '+frac(8,40)+' = '+frac(1,5)+'.'},
+  {q:'في تقويم شهر أبريل (٣٠ يوماً)، توجد ٤ أيام إثنين. ما احتمال اختيار يوم ليس الإثنين؟',o:[frac(2,15),frac(13,15),frac(26,31),frac(4,26)],a:1,w:'٢٦ يوماً ليست الإثنين من ٣٠ يوماً ← '+frac(26,30)+' = '+frac(13,15)+'.'},
+  {q:'عند رمي عملتين معدنيتين معاً، ما احتمال الحصول على صورة وكتابة؟',o:[frac(1,4),frac(1,2),frac(1,3),frac(3,4)],a:1,w:'توجد نتيجتان (ص ك ، ك ص) من ٤ نتائج متساوية ← '+frac(2,4)+' = '+frac(1,2)+'.'}
+];
+renderQuiz($('#s2FormQuiz'),S2_FORM,true,(c,n)=>{
+  $('#s2FormScore').textContent=`النتيجة: ${ar(c)} من ${ar(n)}`+(n===S2_FORM.length?(c===n?' · ممتاز!':c>=3?' · أحسنت':' · راجع الأمثلة'):'');
+});
+
+const S2_FIN=[
+  {q:'في لعبة «سكرابل» (١٠٠ بلاطة)، مجموع أحرف العلة ٤٢ بلاطة. ما احتمال اختيار بلاطة ليست حرف علة في أبسط صورة؟',o:[frac(21,50),frac(29,50),frac(58,100),frac(42,58)],a:1,w:'١٠٠ − ٤٢ = ٥٨ بلاطة ليست حرف علة ← '+frac(58,100)+' = '+frac(29,50)+'.'},
+  {q:'في شبكة الأعداد من ١ إلى ٤٠، ما احتمال اختيار عدد ليس في آخر عمودين؟',o:[frac(1,4),frac(3,4),frac(30,40),frac(2,5)],a:1,w:'آخر عمودين يحويان ١٠ أعداد، والباقي ٣٠ عدداً من ٤٠ ← '+frac(30,40)+' = '+frac(3,4)+'.'},
+  {q:'في تقويم شهر أبريل (٣٠ يوماً)، ما احتمال اختيار يوم الخميس (٥ أيام) أو الجمعة (٤ أيام)؟',o:[frac(9,30),frac(3,10),frac(7,10),frac(1,6)],a:1,w:'٥ + ٤ = ٩ أيام من ٣٠ ← '+frac(9,30)+' = '+frac(3,10)+'.'},
+  {q:'تختار عائشة يوماً عشوائياً من سنة كبيسة ٢٠٢٠ (٣٦٦ يوماً) بدلاً من ٢٠١٩ (٣٦٥ يوماً). أيّ مما يلي يزيد احتماله في ٢٠٢٠؟',o:['يوم ٥ من أغسطس','يوم ليس ٥ من أغسطس','يوم في شهر أغسطس','جميع ما سبق'],a:1,w:'احتمال ليس ٥ من أغسطس يصبح '+frac(365,366)+' وهو أكبر من '+frac(364,365)+' (بينما '+frac(1,366)+' أقل من '+frac(1,365)+').'},
+  {q:'يكوّن الحاسب عشوائياً عدداً ثنائياً من ٠٠ إلى ٩٩ (١٠٠ عدد). ما احتمال أن يتضمّن العدد الرقم ٩ مرة واحدة على الأقل؟',o:[frac(9,100),frac(19,100),frac(81,100),frac(20,100)],a:1,w:'الأعداد التي تحوي ٩ هي (٠٩، ١٩.. ٨٩) وعددها ٩، بالإضافة إلى (٩٠ إلى ٩٩) وعددها ١٠ ← المجموع ١٩ عدداً من ١٠٠ ← '+frac(19,100)+'.'},
+  {q:'ترمي سارة ثلاث عملات معدنية معاً (٨ نتائج متساوية). ما احتمال الحصول على عملتين كتابة والأخرى صورة؟',o:[frac(1,8),frac(3,8),frac(2,8),frac(1,2)],a:1,w:'النواتج هي (ك ك ص ، ك ص ك ، ص ك ك) وعددها ٣ من ٨ ← '+frac(3,8)+'.'}
+];
+let s2Fin=renderQuiz($('#s2FinQuiz'),S2_FIN,false);
+$('#s2FinSubmit').onclick=()=>{
+  const c=s2Fin.grade(), n=S2_FIN.length, p=Math.round(c/n*100);
+  const lvl=p>=90?'ممتاز':p>=75?'جيد جدًا':p>=60?'جيد':'يحتاج إلى مراجعة';
+  const nm=$('#s2FinName').value.trim()||'الطالب';
+  $('#s2FinResult').innerHTML=`<div class="result"><span>${nm} · الحصة الثانية</span><b class="num">${ar(c)} / ${ar(n)}</b><span>النسبة ${ar(p)}٪ · المستوى: ${lvl}</span></div>`;
+  $('#s2FinResult').scrollIntoView({behavior:RM?'auto':'smooth',block:'nearest'});
+};
+$('#s2FinReset').onclick=()=>{s2Fin=renderQuiz($('#s2FinQuiz'),S2_FIN,false);$('#s2FinResult').innerHTML=''};
+
+/* Session 2 Competition */
+initCompetition('s2CompBox','prob8-72-s2-comp',[
+  {q:'في لعبة «سكرابل» (١٠٠ بلاطة)، توجد ٩ بلاطات لحرف (ي). ما احتمال ألا يكون الحرف (ي)؟',o:[frac(9,100),frac(91,100),frac(9,91),frac(81,100)],a:1,w:'١٠٠ − ٩ = ٩١ بلاطة ليست (ي) ← '+frac(91,100)+'.'},
+  {q:'في شبكة الأعداد من ١ إلى ٤٠، ما احتمال اختيار عدد في العمود الأول (٥ أعداد)؟',o:[frac(1,5),frac(1,8),frac(5,35),frac(1,40)],a:1,w:frac(5,40)+' = '+frac(1,8)+'.'},
+  {q:'في تقويم شهر أبريل (٣٠ يوماً)، ما احتمال اختيار يوم ليس ١٦ من أبريل؟',o:[frac(1,30),frac(29,30),frac(15,30),frac(29,31)],a:1,w:'٣٠ − ١ = ٢٩ يوماً ← '+frac(29,30)+'.'},
+  {q:'يكوّن الحاسب رقماً أحادياً من ٠ إلى ٩. ما احتمال أن يكون أصغر من ٧؟',o:[frac(6,10),frac(7,10),frac(7,9),frac(3,10)],a:1,w:'الأرقام (٠، ١، ٢، ٣، ٤، ٥، ٦) عددها ٧ من أصل ١٠ ← '+frac(7,10)+'.'},
+  {q:'عند رمي عملتين معدنيتين معاً، ما احتمال الحصول على صورة وكتابة؟',o:[frac(1,4),frac(1,2),frac(1,3),frac(3,4)],a:1,w:frac(2,4)+' = '+frac(1,2)+'.'},
+  {q:'عند رمي ثلاث عملات معدنية معاً، ما احتمال الحصول على ثلاث عملات صورة؟',o:[frac(3,8),frac(1,8),frac(1,3),frac(1,4)],a:1,w:'نتيجة واحدة (ص ص ص) من أصل ٨ نتائج ← '+frac(1,8)+'.'}
+]);
+
+/* Session 2 Homework */
+initHomework('s2','prob8-72-s2-hw','الحصة الثانية: الجداول والشبكات وتجارب العملات',[
+  'تختار عائشة يوماً واحداً عشوائياً من السنة ٢٠١٩. افترض أنها اختارت يوماً في ٢٠٢٠ (سنة كبيسة ٣٦٦ يوماً) بدلاً من ٢٠١٩ (٣٦٥ يوماً). أيّ احتمالات الجزئية (أ) قد تكون أكبر الآن؟ وضّح السبب (تمرين ٦ ب).',
+  'يكوّن الحاسب عشوائياً عدداً من أرقام ثنائية من ٠٠ إلى ٩٩. أوجد احتمال أن العدد: (أ) ٩٩ ، (ب) ليس ٩٩ ، (ج) لا يتضمّن تسعات ، (د) يتضمّن ٩ واحدة على الأقل (تمرين ٨).',
+  'ترمي سارة ثلاث عملات معدنية معاً. اشرح لماذا توجد ثماني نتائج للاحتمالات المُرجَّحة بالتساوي، ثم أوجد احتمال الحصول على: (١) ثلاث عملات صورة ، (٢) عملتين صورة والأخرى كتابة (تمرين ١٠).'
+]);
+
+/* Session 2 Mind Map SVG */
+{
+  function svgFrac(x,y,n,d,fill='var(--ink)'){
+    return `<g font-family="IBM Plex Sans Arabic,sans-serif" font-weight="700" font-size="14" fill="${fill}" text-anchor="middle">
+      <text x="${x}" y="${y-4}">${ar(n)}</text>
+      <line x1="${x-14}" y1="${y}" x2="${x+14}" y2="${y}" stroke="${fill}" stroke-width="1.5"/>
+      <text x="${x}" y="${y+14}">${ar(d)}</text>
+    </g>`;
+  }
+  const B=[
+    {t:'تمرين (٣): بلاطات سكرابل',x:835,y:70,c:'--f2',l:['المجموع الكلي = ١٠٠ بلاطة','أحرف العلة = ٤٢ بلاطة','ليست أحرف علة = ٥٨ بلاطة']},
+    {t:'تمرين (٤) و (٥): الشبكة والتقويم',x:835,y:345,c:'--f1',l:['شبكة الأعداد (١-٤٠): ٤٠ عدداً','أول عمودين: ١٠ أعداد متساوية','تقويم شهر أبريل: ٣٠ يوماً']},
+    {t:'تمارين (٦ - ٨): الأيام والأرقام',x:165,y:70,c:'--f3',l:['السنة ٢٠١٩: ٣٦٥ ، الكبيسة ٢٠٢٠: ٣٦٦','أرقام أحادية (٠-٩): ١٠ أرقام','أرقام ثنائية (٠٠-٩٩): ١٠٠ عدد']},
+    {t:'تمارين (٩ - ١٠): رمي العملات',x:165,y:345,c:'--f5',l:['رمي عملتين: ٤ نتائج متساوية','صورة وكتابة = ٢ من ٤ (نصف)','رمي ثلاث عملات: ٨ نتائج متساوية']}
+  ];
+  const W=1000, Hh=630, cx=500, cy=285;
+  let s=`<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="خريطة ذهنية للحصة الثانية" style="font-family:'IBM Plex Sans Arabic',sans-serif">`;
+  B.forEach(b=>{s+=`<path d="M${cx},${cy} Q${(cx+b.x)/2},${b.y} ${b.x},${b.y}" style="fill:none;stroke:var(${b.c});stroke-width:5;stroke-linecap:round"/>`});
+  s+=`<path d="M${cx},${cy} L${cx},490" style="fill:none;stroke:var(--f4);stroke-width:5;stroke-linecap:round"/>`;
+
+  B.forEach(b=>{
+    b.l.forEach((_,i)=>{const y=b.y+58+i*46;s+=`<line x1="${b.x}" y1="${b.y+22}" x2="${b.x}" y2="${y}" style="stroke:var(${b.c});stroke-width:2"/>`});
+    s+=`<rect x="${b.x-135}" y="${b.y-24}" width="270" height="48" rx="24" style="fill:var(${b.c})"/><text x="${b.x}" y="${b.y+7}" text-anchor="middle" style="fill:#fff;font-size:17.5px;font-weight:800;font-family:'Tajawal',sans-serif">${b.t}</text>`;
+    b.l.forEach((l,i)=>{const y=b.y+58+i*46;s+=`<rect x="${b.x-150}" y="${y-17}" width="300" height="34" rx="9" style="fill:var(--soft);stroke:var(${b.c});stroke-width:1.5"/><text x="${b.x}" y="${y+6}" text-anchor="middle" style="fill:var(--ink);font-size:15px">${l}</text>`});
+  });
+
+  s+=`<rect x="350" y="465" width="300" height="48" rx="24" style="fill:var(--f4)"/><text x="500" y="496" text-anchor="middle" style="fill:#fff;font-size:18px;font-weight:800;font-family:'Tajawal',sans-serif">أمثلة التبسيط من الحصة الثانية</text>`;
+  s+=`<line x1="500" y1="513" x2="300" y2="560" style="stroke:var(--f4);stroke-width:2"/>`;
+  s+=`<rect x="115" y="545" width="370" height="54" rx="10" style="fill:var(--soft);stroke:var(--f4);stroke-width:1.5"/>`;
+  s+=`<text x="415" y="577" text-anchor="middle" style="fill:var(--ink);font-size:15px;font-weight:700">عملتان (صورة وكتابة):</text>`;
+  s+=svgFrac(300, 572, 2, 4);
+  s+=`<text x="265" y="577" text-anchor="middle" style="fill:var(--ink);font-size:16px;font-weight:700">=</text>`;
+  s+=svgFrac(230, 572, 1, 2);
+
+  s+=`<line x1="500" y1="513" x2="700" y2="560" style="stroke:var(--f4);stroke-width:2"/>`;
+  s+=`<rect x="520" y="545" width="360" height="54" rx="10" style="fill:var(--soft);stroke:var(--f4);stroke-width:1.5"/>`;
+  s+=`<text x="805" y="577" text-anchor="middle" style="fill:var(--ink);font-size:15px;font-weight:700">أحرف علة سكرابل:</text>`;
+  s+=svgFrac(705, 572, 42, 100);
+  s+=`<text x="665" y="577" text-anchor="middle" style="fill:var(--ink);font-size:16px;font-weight:700">=</text>`;
+  s+=svgFrac(625, 572, 21, 50);
+
+  s+=`<rect x="${cx-185}" y="${cy-44}" width="370" height="88" rx="20" style="fill:var(--ink)"/><text x="${cx}" y="${cy-5}" text-anchor="middle" style="fill:var(--paper);font-size:21px;font-weight:800;font-family:'Tajawal',sans-serif">الحصة الثانية: ٧-٢</text><text x="${cx}" y="${cy+27}" text-anchor="middle" style="fill:var(--paper);font-size:20px;font-weight:800;font-family:'Tajawal',sans-serif">الجداول والشبكات والعملات</text></svg>`;
+  $('#s2MindMap').innerHTML=s;
+}
+
+/* Session 2 Game */
+initGame('s2',[
+  {given:'١٠٠ بلاطة «سكرابل» (٤٢ حرف علة)',q:'ما احتمال اختيار حرف علة في أبسط صورة؟',h:'٤٢ من ١٠٠ بقسمة البسط والمقام على ٢',opts:[frac(42,58),frac(21,50),frac(29,50),frac(12,25)],a:1},
+  {given:'تقويم شهر أبريل (٣٠ يوماً)',q:'ما احتمال اختيار يوم ١٦ من أبريل؟',h:'يوم واحد محدد من ٣٠ يوماً',opts:[frac(16,30),frac(1,30),frac(29,30),frac(1,16)],a:1},
+  {given:'الأرقام الأحادية (٠ إلى ٩)',q:'ما احتمال اختيار العدد ٠؟',h:'١٠ أرقام متساوية الفرص (من ٠ إلى ٩)',opts:[frac(1,9),frac(1,10),frac(0,10),frac(9,10)],a:1},
+  {given:'رمي عملتين معدنيتين معاً',q:'ما احتمال ظهور العملتين كتابة (ك ك)؟',h:'نتيجة واحدة من ٤ نتائج متساوية',opts:[frac(1,2),frac(1,4),frac(3,4),frac(1,3)],a:1},
+  {given:'رمي ثلاث عملات معدنية معاً',q:'ما احتمال ظهور ٣ عملات كتابة؟',h:'نتيجة واحدة (ك ك ك) من ٨ نتائج',opts:[frac(3,8),frac(1,8),frac(1,3),frac(7,8)],a:1},
+  {given:'شبكة الأعداد (١ إلى ٤٠)',q:'ما احتمال اختيار عدد في الصف السفلي (٨ أعداد)؟',h:'٨ من ٤٠ بقسمة البسط والمقام على ٨',opts:[frac(1,8),frac(1,5),frac(8,32),frac(2,5)],a:1}
+]);
+
+})();
+</script>
+</body>
+</html>
